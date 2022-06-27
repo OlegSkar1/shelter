@@ -1,0 +1,10 @@
+@import './base/reset';
+@import './base/typography';
+h1 {
+  font: normal 30px tinos;
+}
+div {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
