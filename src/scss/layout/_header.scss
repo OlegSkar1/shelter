@@ -1,0 +1,53 @@
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  .header__wrapper {
+    @extend %flex-center;
+    max-width: 1280px;
+    margin: 60px auto 0 auto;
+    padding: 0 40px;
+
+    .header__logo {
+      a {
+        text-decoration: none;
+      }
+      h1 {
+        @extend %logo-title;
+        color: $color-primary;
+        margin-bottom: 10px;
+      }
+      p {
+        @extend %logo-subtitle;
+        color: $color-light-xl;
+      }
+    }
+
+    .header__nav {
+      a {
+        text-decoration: none;
+        @extend %paragraph-l;
+        color: $color-dark-s;
+        margin-right: 35px;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover {
+          color: $color-light-s;
+        }
+        &:focus {
+          color: $color-light-s;
+          padding-bottom: 10px;
+          border-bottom: 3px solid $color-primary;
+          transition: 0.3s all;
+        }
+        &:first-child {
+          color: $color-light-s;
+          padding-bottom: 10px;
+          border-bottom: 3px solid $color-primary;
+        }
+      }
+    }
+  }
+}

@@ -76,25 +76,135 @@ select {
   font-family: "Tinos";
   font-style: normal;
   font-weight: 400;
-  src: url("..assets/fonts/tinos-v24-latin-regular.eot"); /* IE9 Compat Modes */
-  src: local(""), url("..assets/fonts/tinos-v24-latin-regular.eot?#iefix") format("embedded-opentype"), url("..assets/fonts/tinos-v24-latin-regular.woff2") format("woff2"), url("..assets/fonts/tinos-v24-latin-regular.woff") format("woff"), url("..assets/fonts/tinos-v24-latin-regular.ttf") format("truetype"), url("..assets/fonts/tinos-v24-latin-regular.svg#Tinos") format("svg"); /* Legacy iOS */
+  src: url("/src/assets/fonts/tinos-v24-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""), url("/src/assets/fonts/tinos-v24-latin-regular.eot?#iefix") format("embedded-opentype"), url("/src/assets/fonts/tinos-v24-latin-regular.woff2") format("woff2"), url("..assets/fonts/tinos-v24-latin-regular.woff") format("woff"), url("/src/assets/fonts/tinos-v24-latin-regular.ttf") format("truetype"), url("/src/assets/fonts/tinos-v24-latin-regular.svg#Tinos") format("svg"); /* Legacy iOS */
 }
 /* tinos-italic - latin */
 @font-face {
   font-family: "Tinos";
   font-style: italic;
   font-weight: 400;
-  src: url("..assets/fonts/tinos-v24-latin-italic.eot"); /* IE9 Compat Modes */
-  src: local(""), url("..assets/fonts/tinos-v24-latin-italic.eot?#iefix") format("embedded-opentype"), url("..assets/fonts/tinos-v24-latin-italic.woff2") format("woff2"), url("..assets/fonts/tinos-v24-latin-italic.woff") format("woff"), url("..assets/fonts/tinos-v24-latin-italic.ttf") format("truetype"), url("..assets/fonts/tinos-v24-latin-italic.svg#Tinos") format("svg"); /* Legacy iOS */
+  src: url("/src/assets/fonts/tinos-v24-latin-italic.eot"); /* IE9 Compat Modes */
+  src: local(""), url("/src/assets/fonts/tinos-v24-latin-italic.eot?#iefix") format("embedded-opentype"), url("/src/assets/fonts/tinos-v24-latin-italic.woff2") format("woff2"), url("/src/assets/fonts/tinos-v24-latin-italic.woff") format("woff"), url("/src/assets/fonts/tinos-v24-latin-italic.ttf") format("truetype"), url("/src/assets/fonts/tinos-v24-latin-italic.svg#Tinos") format("svg"); /* Legacy iOS */
 }
-h1 {
-  font: normal 30px tinos;
+.header .header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-div {
-  width: 500px;
-  height: 500px;
-  margin: auto;
+.start-screen {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header .header__wrapper .header__logo h1 {
+  font-family: "tinos";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+.header .header__wrapper .header__logo p {
+  font-family: "Arial";
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+.start-screen .start-screen__content h2 {
+  font-family: "tinos";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+}
+
+.header .header__wrapper .header__nav a, .start-screen .start-screen__content p {
+  font-family: "Arial";
+  font-size: 15px;
+  line-height: 160%;
+}
+
+html {
+  background-color: #e5e5e5;
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.start-screen {
+  background: url(/src/assets/img/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+  width: 100%;
+  height: 80.2863436123%;
+  padding: 0 40px;
+}
+.start-screen .start-screen__puppy {
+  width: 58.1666666667%;
+  height: auto;
+  padding-top: 19.8237885463%;
+}
+.start-screen .start-screen__content {
+  width: 38.3333333333%;
+  padding-top: 37.7753303965%;
+}
+.start-screen .start-screen__content h2 {
+  color: #fff;
+  width: 67.3913043478%;
+  padding-bottom: 13.0434782609%;
+}
+.start-screen .start-screen__content p {
+  color: #cdcdcd;
+  padding-bottom: 13.0434782609%;
+}
+
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+.header .header__wrapper {
+  max-width: 1280px;
+  margin: 60px auto 0 auto;
+  padding: 0 40px;
+}
+.header .header__wrapper .header__logo a {
+  text-decoration: none;
+}
+.header .header__wrapper .header__logo h1 {
+  color: #f1cdb3;
+  margin-bottom: 10px;
+}
+.header .header__wrapper .header__logo p {
+  color: #fff;
+}
+.header .header__wrapper .header__nav a {
+  text-decoration: none;
+  color: #cdcdcd;
+  margin-right: 35px;
+}
+.header .header__wrapper .header__nav a:last-child {
+  margin-right: 0;
+}
+.header .header__wrapper .header__nav a:hover {
+  color: #fafafa;
+}
+.header .header__wrapper .header__nav a:focus {
+  color: #fafafa;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #f1cdb3;
+  transition: 0.3s all;
+}
+.header .header__wrapper .header__nav a:first-child {
+  color: #fafafa;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #f1cdb3;
 }
 
 /*# sourceMappingURL=main.css.map */
