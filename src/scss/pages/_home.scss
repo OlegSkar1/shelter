@@ -5,38 +5,3 @@ body {
   max-width: 1280px;
   margin: 0 auto;
 }
-
-.start-screen {
-  @extend %flex-start;
-  background: url(/src/assets/img/noise_transparent@2x.png),
-    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
-  width: 100%;
-  height: calc(
-    (729 / 908) * 100%
-  ); // 729 высота собаки, 908 высота start-screen по умолчанию
-  padding: 0 40px;
-
-  .start-screen__puppy {
-    width: $start-screen__puppy;
-    height: auto;
-    padding-top: calc(
-      (180 / 908) * 100%
-    ); // 180 высота header, 908 высота start-screen по умолчанию
-  }
-
-  .start-screen__content {
-    width: calc(460 / 1200) * 100%; // 460 ширина блока
-    padding-top: calc(343 / 908) * 100%; // 343 расстояние от самой верхней точки header
-    h2 {
-      @extend %h2;
-      color: $color-light-xl;
-      width: calc((310 / 460) * 100%); // 310 ширина title
-      padding-bottom: calc(42 / 322) * 100%; // 42 отступ от title
-    }
-    p {
-      @extend %paragraph-l;
-      color: $color-dark-s;
-      padding-bottom: calc(42 / 322) * 100%;
-    }
-  }
-}
