@@ -1,1 +1,32 @@
-// шрифты
+//отступы
+@mixin margin-top($px, $parent) {
+  //px отступ, parent ширина родительского блока
+  margin-top: calc(
+    ($px / $parent) * 100%
+  ); // отступ в % относительно ширины родительского блока
+}
+@mixin margin-bottom($px, $parent) {
+  margin-bottom: calc(($px / $parent) * 100%);
+}
+@mixin margin-left($px, $parent) {
+  margin-left: calc(($px / $parent) * 100%);
+}
+@mixin margin-right($px, $parent) {
+  margin-right: calc(($px / $parent) * 100%);
+}
+@mixin padding-top($px, $parent) {
+  padding-top: calc(($px / $parent) * 100%);
+}
+@mixin padding-bottom($px, $parent) {
+  padding-bottom: calc(($px / $parent) * 100%);
+}
+@mixin padding-left($px, $parent) {
+  padding-left: calc(($px / $parent) * 100%);
+}
+@mixin padding-right($px, $parent) {
+  padding-right: calc(($px / $parent) * 100%);
+}
+@mixin width($px, $parent) {
+  //px ширина текущего элемента, parent ширина родительского блока
+  width: calc(($px / $parent) * 100%);
+}

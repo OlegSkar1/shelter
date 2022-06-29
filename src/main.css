@@ -87,7 +87,7 @@ select {
   src: url("/src/assets/fonts/tinos-v24-latin-italic.eot"); /* IE9 Compat Modes */
   src: local(""), url("/src/assets/fonts/tinos-v24-latin-italic.eot?#iefix") format("embedded-opentype"), url("/src/assets/fonts/tinos-v24-latin-italic.woff2") format("woff2"), url("/src/assets/fonts/tinos-v24-latin-italic.woff") format("woff"), url("/src/assets/fonts/tinos-v24-latin-italic.ttf") format("truetype"), url("/src/assets/fonts/tinos-v24-latin-italic.svg#Tinos") format("svg"); /* Legacy iOS */
 }
-.header .header__wrapper {
+.about .about__wrapper, .header .header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -109,7 +109,7 @@ select {
   letter-spacing: 0.1em;
 }
 
-.start-screen__content h2 {
+.start-screen .start-screen__content h2 {
   font-family: "tinos";
   font-style: normal;
   font-weight: 400;
@@ -117,10 +117,26 @@ select {
   line-height: 130%;
 }
 
-.start-screen__content p, .header .header__wrapper .header__nav a {
+.about .about__wrapper .about__content h3 {
+  font-family: "tinos";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.about .about__wrapper .about__content p, .start-screen .start-screen__content p, .header .header__wrapper .header__nav a {
   font-family: "Arial";
   font-size: 15px;
   line-height: 160%;
+}
+
+button {
+  border-radius: 100px;
+  background: #f1cdb3;
+  border: 0;
+  padding: 15px 45px;
 }
 
 html {
@@ -132,11 +148,14 @@ body {
   margin: 0 auto;
 }
 
+.header {
+  max-height: 908px;
+}
 .header .header__image {
   background: url(/src/assets/img/Start_screen.jpg) top center no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 60px 40px 0;
 }
 .header .header__wrapper {
@@ -157,12 +176,14 @@ body {
   text-decoration: none;
   color: #cdcdcd;
   margin-right: 35px;
+  transition: 0.3s all;
 }
 .header .header__wrapper .header__nav a:last-child {
   margin-right: 0;
 }
 .header .header__wrapper .header__nav a:hover {
   color: #fafafa;
+  transition: 0.3s all;
 }
 .header .header__wrapper .header__nav a:focus {
   color: #fafafa;
@@ -176,20 +197,22 @@ body {
   border-bottom: 3px solid #f1cdb3;
 }
 
-.start-screen__content {
+.start-screen .start-screen__content {
   width: 38.3333333333%;
-  padding-top: 17.9515418502vh;
+  padding-top: 13.5833333333%;
+  padding-bottom: 20.25%;
 }
-.start-screen__content h2 {
+.start-screen .start-screen__content h2 {
   color: #fff;
   width: 67.3913043478%;
-  margin-bottom: 42px;
+  margin-bottom: 9.1304347826%;
 }
-.start-screen__content p {
+.start-screen .start-screen__content p {
   color: #cdcdcd;
-  margin-bottom: 42px;
+  margin-bottom: 9.1304347826%;
 }
-.start-screen__content .start-screen_button {
+.start-screen .start-screen__content .start-screen_button {
+  width: 207px;
   font-family: "tinos";
   font-style: normal;
   font-weight: 400;
@@ -197,13 +220,46 @@ body {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
+  transition: 0.3s all;
+}
+.start-screen .start-screen__content .start-screen_button:hover {
+  background-color: #fddcc4;
+  transition: 0.3s all;
 }
 
-button {
-  border-radius: 100px;
-  background: #f1cdb3;
-  border: 0;
-  padding: 15px 45px;
+.about {
+  width: 100%;
+  background-color: #fff;
+  height: auto;
+}
+.about .about__wrapper {
+  justify-content: center;
+  padding-top: 6.25%;
+  padding-left: 3.125%;
+  padding-right: 3.125%;
+  padding-bottom: 7.8125%;
+}
+.about .about__wrapper .about__content {
+  width: 35.8333333333%;
+  margin-left: 10%;
+}
+.about .about__wrapper .about__content h3 {
+  color: #545454;
+  width: 86.0465116279%;
+  margin-top: 3.2558139535%;
+  margin-bottom: 5.8139534884%;
+}
+.about .about__wrapper .about__content p {
+  color: #4c4c4c;
+  margin-bottom: 5.8139534884%;
+}
+.about .about__wrapper .about__content p:last-child {
+  margin-bottom: 3.2558139535%;
+}
+
+.about__img {
+  width: 25%;
+  height: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

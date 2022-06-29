@@ -1,11 +1,12 @@
+// Header
+
 .header {
-  // position: relative;
-  // max-width: 1280px;
+  max-height: 908px;
   .header__image {
     background: url(/src/assets/img/Start_screen.jpg) top center no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding: 60px 40px 0;
   }
 
@@ -35,11 +36,13 @@
         @extend %paragraph-l;
         color: $color-dark-s;
         margin-right: 35px;
+        transition: 0.3s all;
         &:last-child {
           margin-right: 0;
         }
         &:hover {
           color: $color-light-s;
+          transition: 0.3s all;
         }
         &:focus {
           color: $color-light-s;
@@ -55,34 +58,41 @@
       }
     }
   }
+
+  // Стартовый экран
 }
+.start-screen {
+  .start-screen__content {
+    @include width(460, 1200);
+    @include padding-top(163, 1200);
+    @include padding-bottom(243, 1200);
+    h2 {
+      @extend %h2;
+      color: $color-light-xl;
+      @include width(310, 460);
+      @include margin-bottom(42, 460);
+    }
+    p {
+      @extend %paragraph-l;
+      color: $color-dark-s;
+      @include margin-bottom(42, 460);
+    }
 
-.start-screen__content {
-  width: calc(
-    (460 / 1200) * 100%
-  ); // 460 ширина блока по умолчанию, 1200 ширина контейнера
-  padding-top: calc(
-    (163 / 908) * 100vh
-  ); // 163 высота padding-top  по умолчанию до header, 908 высота контейнера
-  h2 {
-    @extend %h2;
-    color: $color-light-xl;
-    width: calc((310 / 460) * 100%); // 310 ширина title по умолчанию
-    margin-bottom: 42px;
-  }
-  p {
-    @extend %paragraph-l;
-    color: $color-dark-s;
-    margin-bottom: 42px;
-  }
+    .start-screen_button {
+      width: 207px;
+      font-family: "tinos";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 130%;
+      letter-spacing: 0.06em;
+      color: $color-dark-3xl;
+      transition: 0.3s all;
 
-  .start-screen_button {
-    font-family: "tinos";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 130%;
-    letter-spacing: 0.06em;
-    color: $color-dark-3xl;
+      &:hover {
+        background-color: $color-primary-light;
+        transition: 0.3s all;
+      }
+    }
   }
 }
