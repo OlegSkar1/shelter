@@ -117,7 +117,7 @@ select {
   line-height: 130%;
 }
 
-.pets .pets__wrapper h3, .about .about__wrapper .about__content h3 {
+.help .help__wrapper h3, .pets .pets__wrapper h3, .about .about__wrapper .about__content h3 {
   font-family: "tinos";
   font-style: normal;
   font-weight: 400;
@@ -126,7 +126,7 @@ select {
   letter-spacing: 0.06em;
 }
 
-.slider__card p {
+.help .help__list_item p, .slider__card p {
   font-family: "tinos";
   font-style: normal;
   font-weight: 400;
@@ -359,6 +359,44 @@ body {
   margin-bottom: 11.1111111111%;
   cursor: pointer;
   transition: 0.3s all;
+}
+
+.help {
+  background: #fff;
+  width: 100%;
+}
+.help .help__wrapper {
+  padding-top: 6.25%;
+  padding-left: 3.125%;
+  padding-right: 3.125%;
+  padding-bottom: 7.8125%;
+}
+.help .help__wrapper h3 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: #545454;
+  width: 25.6666666667%;
+  margin-bottom: 5%;
+}
+.help .help__wrapper .help__list {
+  width: 85.5%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.help .help__list_item {
+  padding-right: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.help .help__list_item p {
+  color: #545454;
+  padding-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

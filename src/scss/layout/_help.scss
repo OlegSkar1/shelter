@@ -1,0 +1,46 @@
+.help {
+  background: $color-light-xl;
+  width: 100%;
+
+  .help__wrapper {
+    @include padding-top(80, 1280);
+    @include padding-left(40, 1280);
+    @include padding-right(40, 1280);
+    @include padding-bottom(100, 1280);
+
+    h3 {
+      @extend %h3;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      color: $color-dark-l;
+      @include width(308, 1200);
+      @include margin-bottom(60, 1200);
+    }
+
+    .help__list {
+      @include width(1026, 1200);
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      //   margin: 0 auto;
+      //   grid-template-columns: repeat(5, 1fr);
+      //   column-gap: 120px;
+    }
+  }
+
+  .help__list_item {
+    padding-right: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      @extend %h4;
+      color: $color-dark-l;
+      padding-top: 30px;
+    }
+  }
+}
