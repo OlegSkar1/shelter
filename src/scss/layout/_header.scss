@@ -80,12 +80,7 @@
 
     .start-screen_button {
       width: 207px;
-      font-family: "tinos";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 17px;
-      line-height: 130%;
-      letter-spacing: 0.06em;
+      @extend %button;
       color: $color-dark-3xl;
       transition: 0.3s all;
 
