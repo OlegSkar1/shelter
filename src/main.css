@@ -87,7 +87,7 @@ select {
   src: url("/src/assets/fonts/tinos-v24-latin-italic.eot"); /* IE9 Compat Modes */
   src: local(""), url("/src/assets/fonts/tinos-v24-latin-italic.eot?#iefix") format("embedded-opentype"), url("/src/assets/fonts/tinos-v24-latin-italic.woff2") format("woff2"), url("/src/assets/fonts/tinos-v24-latin-italic.woff") format("woff"), url("/src/assets/fonts/tinos-v24-latin-italic.ttf") format("truetype"), url("/src/assets/fonts/tinos-v24-latin-italic.svg#Tinos") format("svg"); /* Legacy iOS */
 }
-.pets .pets__wrapper .pets__slider, .about .about__wrapper, .header .header__wrapper {
+.donation__content .donation__card, .donation__wrapper, .pets .pets__wrapper .pets__slider, .about .about__wrapper, .header .header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,7 +117,7 @@ select {
   line-height: 130%;
 }
 
-.help .help__wrapper h3, .pets .pets__wrapper h3, .about .about__wrapper .about__content h3 {
+.donation__content h3, .help .help__wrapper h3, .pets .pets__wrapper h3, .about .about__wrapper .about__content h3 {
   font-family: "tinos";
   font-style: normal;
   font-weight: 400;
@@ -126,7 +126,7 @@ select {
   letter-spacing: 0.06em;
 }
 
-.help .help__list_item p, .slider__card p {
+.donation__content .donation__card span, .help .help__list_item p, .slider__card p {
   font-family: "tinos";
   font-style: normal;
   font-weight: 400;
@@ -135,10 +135,27 @@ select {
   letter-spacing: 0.06em;
 }
 
+.donation__content .donation_subtitle {
+  font-family: "tinos";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
 .about .about__wrapper .about__content p, .start-screen .start-screen__content p, .header .header__wrapper .header__nav a {
   font-family: "Arial";
   font-size: 15px;
   line-height: 160%;
+}
+
+.donation__content .donation_desc {
+  font-family: "Arial";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
 }
 
 .slider__card .button__more, .pets .pets__wrapper .pets__button, .start-screen .start-screen__content .start-screen_button {
@@ -405,6 +422,46 @@ body {
 .help .help__list_item p {
   color: #545454;
   padding-top: 30px;
+}
+
+.donation {
+  background: #f6f6f6;
+  width: 100%;
+}
+
+.donation__wrapper {
+  padding-top: 6.25%;
+  padding-bottom: 7.8125%;
+  padding-left: 14.2578125%;
+  padding-right: 14.2578125%;
+}
+
+.donation__content {
+  width: 41.5300546448%;
+}
+.donation__content h3 {
+  display: block;
+  color: #545454;
+  width: 78.9473684211%;
+  margin-bottom: 5.2631578947%;
+}
+.donation__content .donation_subtitle {
+  color: #545454;
+  margin-bottom: 5.2631578947%;
+}
+.donation__content .donation_desc {
+  color: #b2b2b2;
+}
+.donation__content .donation__card {
+  width: 83.9473684211%;
+  margin-bottom: 5.2631578947%;
+  padding: 10px 15px;
+  background: #f1cdb3;
+  border-radius: 9px;
+  text-decoration: none;
+}
+.donation__content .donation__card span {
+  color: #545454;
 }
 
 /*# sourceMappingURL=main.css.map */
