@@ -30,3 +30,6 @@
   //px ширина текущего элемента, parent ширина родительского блока
   width: calc(($px / $parent) * 100%);
 }
+@mixin height($px, $parent) {
+  height: calc(($px / $parent) * 100%);
+}
