@@ -1,0 +1,51 @@
+.header {
+  @extend %flex-center;
+  @include padding-top(30, 1280);
+  @include padding-bottom(30, 1280);
+  @include padding-left(40, 1280);
+  @include padding-right(40, 1280);
+  background: $color-light-xl;
+
+  .header__logo {
+    a {
+      text-decoration: none;
+    }
+    h1 {
+      @extend %logo-title;
+      color: $color-dark-l;
+      margin-bottom: 10px;
+    }
+    p {
+      @extend %logo-subtitle;
+      color: $color-dark-3xl;
+    }
+  }
+
+  .header__nav {
+    a {
+      text-decoration: none;
+      @extend %paragraph-l;
+      color: $color-dark-l;
+      margin-right: 35px;
+      transition: 0.3s all;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        color: $color-dark-3xl;
+        transition: 0.3s all;
+      }
+      &:focus {
+        color: $color-dark-3xl;
+        padding-bottom: 10px;
+        border-bottom: 3px solid $color-primary;
+        transition: 0.3s all;
+      }
+      &:nth-child(2) {
+        color: $color-dark-3xl;
+        padding-bottom: 10px;
+        border-bottom: 3px solid $color-primary;
+      }
+    }
+  }
+}
