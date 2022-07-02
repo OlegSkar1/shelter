@@ -1,0 +1,48 @@
+.donation {
+  background: $color-light-l;
+  width: 100%;
+}
+
+.donation__wrapper {
+  @include padding-top(80, 1280);
+  @include padding-bottom(100, 1280);
+  @include padding-left(182.5, 1280);
+  @include padding-right(182.5, 1280);
+  @extend %flex-center;
+}
+
+.donation__content {
+  @include width(380, 915);
+  h3 {
+    display: block;
+    @extend %h3;
+    color: $color-dark-l;
+    @include width(300, 380);
+    @include margin-bottom(20, 380);
+  }
+
+  .donation_subtitle {
+    @extend %h5;
+    color: $color-dark-l;
+    @include margin-bottom(20, 380);
+  }
+
+  .donation_desc {
+    @extend %paragraph-s;
+    color: $color-dark-m;
+  }
+
+  .donation__card {
+    @include width(319, 380);
+    @include margin-bottom(20, 380);
+    @extend %flex-center;
+    padding: 10px 15px;
+    background: $color-primary;
+    border-radius: 9px;
+    text-decoration: none;
+    span {
+      @extend %h4;
+      color: $color-dark-l;
+    }
+  }
+}

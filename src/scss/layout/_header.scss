@@ -82,6 +82,7 @@
       width: 207px;
       @extend %button;
       color: $color-dark-3xl;
+      cursor: pointer;
       transition: 0.3s all;
 
       &:hover {
