@@ -2,7 +2,9 @@
 @import './base/typography';
 @import './utils/variables';
 @import './utils/prototype';
-@import './components/buttons';
 @import './utils/mixins';
+@import './components/buttons';
+@import './components/card';
 @import './pages/home';
 @import './layout/pets/header';
+@import './layout/pets/pets';

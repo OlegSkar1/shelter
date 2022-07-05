@@ -1,0 +1,34 @@
+.pets {
+  background: $color-light-l;
+}
+
+h3 {
+  @extend %h3;
+  text-align: center;
+  color: $color-dark-l;
+  @include width(400, 1200);
+  @include padding-bottom(45, 1280);
+  @include padding-top(80, 1280);
+  margin: 0 auto;
+}
+
+.pets__content {
+  @include padding-top(15, 1280);
+  @include padding-left(40, 1280);
+  @include padding-right(40, 1280);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 40px;
+}
+
+.navigation {
+  @include width(340, 1280);
+  @include padding-top(45, 1280);
+  @include padding-bottom(100, 1280);
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

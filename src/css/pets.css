@@ -113,10 +113,37 @@ select {
   letter-spacing: 0.1em;
 }
 
+h3 {
+  font-family: "tinos";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.pet__card p, .button__paginator span, .button__paginator_active span, .button__paginator_inactive span {
+  font-family: "tinos";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
 .header .header__nav a {
   font-family: "Arial";
   font-size: 15px;
   line-height: 160%;
+}
+
+.pet__card .button__more {
+  font-family: "tinos";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
 }
 
 .button {
@@ -137,6 +164,82 @@ select {
   transition: 0.3s all;
 }
 
+.button__paginator_inactive {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #cdcdcd;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button__paginator_inactive span {
+  color: #cdcdcd;
+}
+
+.button__paginator_active {
+  width: 52px;
+  height: 52px;
+  background: #f1cdb3;
+  border: 0;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button__paginator_active span {
+  color: #292929;
+}
+
+.button__paginator {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button__paginator span {
+  color: #292929;
+}
+
+.pet__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.pet__card:hover {
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  background-color: #fff;
+  transition: 0.3s all;
+}
+.pet__card:hover .button__more {
+  background: #fddcc4;
+  border: 2px solid #fddcc4;
+  transition: 0.3s all;
+}
+.pet__card .pets__img {
+  margin-bottom: 11.1111111111%;
+}
+.pet__card p {
+  color: #545454;
+  margin-bottom: 11.1111111111%;
+}
+.pet__card .button__more {
+  background: transparent;
+  border: 2px solid #f1cdb3;
+  width: 187px;
+  color: #292929;
+  margin-bottom: 11.1111111111%;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
 html {
   background-color: #e5e5e5;
 }
@@ -147,6 +250,8 @@ body {
 }
 
 .header {
+  position: sticky;
+  top: 0;
   padding-top: 2.34375%;
   padding-bottom: 2.34375%;
   padding-left: 3.125%;
@@ -186,6 +291,38 @@ body {
   color: #292929;
   padding-bottom: 10px;
   border-bottom: 3px solid #f1cdb3;
+}
+
+.pets {
+  background: #f6f6f6;
+}
+
+h3 {
+  text-align: center;
+  color: #545454;
+  width: 33.3333333333%;
+  padding-bottom: 3.515625%;
+  padding-top: 6.25%;
+  margin: 0 auto;
+}
+
+.pets__content {
+  padding-top: 1.171875%;
+  padding-left: 3.125%;
+  padding-right: 3.125%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 40px;
+}
+
+.navigation {
+  width: 26.5625%;
+  padding-top: 3.515625%;
+  padding-bottom: 7.8125%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=pets.css.map */

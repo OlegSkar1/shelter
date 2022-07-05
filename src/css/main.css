@@ -130,7 +130,7 @@ select {
   letter-spacing: 0.06em;
 }
 
-.content__container a, .donation__content .donation__card span, .help .help__list_item p, .slider__card p {
+.content__container a, .donation__content .donation__card span, .help .help__list_item p, .slider__card p, .button__paginator span, .button__paginator_active span, .button__paginator_inactive span {
   font-family: "tinos";
   font-style: normal;
   font-weight: 400;
@@ -187,6 +187,46 @@ select {
   justify-content: center;
   align-items: center;
   transition: 0.3s all;
+}
+
+.button__paginator_inactive {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #cdcdcd;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button__paginator_inactive span {
+  color: #cdcdcd;
+}
+
+.button__paginator_active {
+  width: 52px;
+  height: 52px;
+  background: #f1cdb3;
+  border: 0;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button__paginator_active span {
+  color: #292929;
+}
+
+.button__paginator {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button__paginator span {
+  color: #292929;
 }
 
 html {
@@ -309,7 +349,6 @@ body {
 
 .pets {
   background-color: #f6f6f6;
-  width: 100%;
 }
 .pets .pets__wrapper {
   display: flex;

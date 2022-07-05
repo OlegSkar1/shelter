@@ -1,4 +1,7 @@
 .header {
+  position: sticky;
+  top: 0;
+
   @extend %flex-center;
   @include padding-top(30, 1280);
   @include padding-bottom(30, 1280);
