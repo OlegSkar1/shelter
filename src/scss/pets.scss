@@ -1,10 +1,11 @@
 @import './base/reset';
 @import './base/typography';
 @import './utils/variables';
+@import './pages/home';
 @import './utils/prototype';
 @import './utils/mixins';
 @import './components/buttons';
 @import './components/card';
-@import './pages/home';
 @import './layout/pets/header';
 @import './layout/pets/pets';
+@import './layout/main/footer';

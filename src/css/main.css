@@ -121,7 +121,7 @@ select {
   line-height: 130%;
 }
 
-.footer__wrapper h3, .donation__content h3, .help .help__wrapper h3, .pets .pets__wrapper h3, .about .about__wrapper .about__content h3 {
+.content__container h3, .donation__content h3, .help .help__wrapper h3, .pets .pets__wrapper h3, .about .about__wrapper .about__content h3 {
   font-family: "tinos";
   font-style: normal;
   font-weight: 400;
@@ -221,12 +221,19 @@ select {
   height: 52px;
   border: 2px solid #f1cdb3;
   border-radius: 100px;
+  transition: 0.3s all;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .button__paginator span {
   color: #292929;
+}
+.button__paginator:hover {
+  background: #fddcc4;
+  border: 2px solid #fddcc4;
+  cursor: pointer;
+  transition: 0.3s all;
 }
 
 html {
@@ -521,17 +528,16 @@ body {
   justify-content: space-between;
   align-items: flex-start;
 }
-.footer__wrapper h3 {
-  color: #fff;
-}
 
 .content__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 1.3333333333%;
+  margin-top: 1.25%;
   margin-bottom: 5%;
-  height: 19.5%;
+}
+.content__container h3 {
+  color: #fff;
 }
 .content__container a {
   justify-content: flex-start;
@@ -543,13 +549,13 @@ body {
 }
 .content__container .phone,
 .content__container .mail {
-  padding-top: 14.8148148148%;
+  padding-top: 14.3884892086%;
 }
 .content__container .boston_maps {
-  padding-top: 11.2582781457%;
+  padding-top: 10.9271523179%;
 }
 .content__container .london_maps {
-  padding-top: 10.5960264901%;
+  padding-top: 10.9271523179%;
 }
 
 .content__container_locate {

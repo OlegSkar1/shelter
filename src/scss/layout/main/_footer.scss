@@ -13,10 +13,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  h3 {
-    @extend %h3;
-    color: $color-light-xl;
-  }
 }
 
 .content__container {
@@ -24,9 +20,13 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @include margin-top(16, 1200);
+  @include margin-top(15, 1200);
   @include margin-bottom(60, 1200);
-  @include height(234, 1200);
+
+  h3 {
+    @extend %h3;
+    color: $color-light-xl;
+  }
 
   a {
     @extend %flex-center;
@@ -44,15 +44,15 @@
 
   .phone,
   .mail {
-    @include padding-top(40, 270);
+    @include padding-top(40, 278);
   }
 
   .boston_maps {
-    @include padding-top(34, 302);
+    @include padding-top(33, 302);
   }
 
   .london_maps {
-    @include padding-top(32, 302);
+    @include padding-top(33, 302);
   }
 }
 

@@ -1,15 +1,15 @@
 .pets {
   background: $color-light-l;
-}
 
-h3 {
-  @extend %h3;
-  text-align: center;
-  color: $color-dark-l;
-  @include width(400, 1200);
-  @include padding-bottom(45, 1280);
-  @include padding-top(80, 1280);
-  margin: 0 auto;
+  h3 {
+    @extend %h3;
+    text-align: center;
+    color: $color-dark-l;
+    @include width(400, 1200);
+    @include padding-bottom(45, 1280);
+    @include padding-top(80, 1280);
+    margin: 0 auto;
+  }
 }
 
 .pets__content {

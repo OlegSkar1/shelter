@@ -52,6 +52,7 @@
   height: 52px;
   border: 2px solid $color-primary;
   border-radius: 100px;
+  transition: 0.3s all;
 
   display: flex;
   justify-content: center;
@@ -60,5 +61,12 @@
   span {
     @extend %h4;
     color: $color-dark-3xl;
+  }
+
+  &:hover {
+    background: $color-primary-light;
+    border: 2px solid $color-primary-light;
+    cursor: pointer;
+    transition: 0.3s all;
   }
 }
