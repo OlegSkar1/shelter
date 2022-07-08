@@ -2,10 +2,15 @@
   background-color: $color-light-xl;
   @extend %flex-center;
   justify-content: center;
-  @include padding-top(80, 1280);
-  @include padding-left(40, 1280);
-  @include padding-right(40, 1280);
-  @include padding-bottom(100, 1280);
+
+  padding: 80px 40px 100px;
+
+  @include media-tablet {
+    flex-direction: column-reverse;
+
+    padding-left: 165px;
+    padding-right: 165px;
+  }
 }
 
 .about__content {
@@ -25,6 +30,14 @@
     @include margin-bottom(25, 430);
     &:last-child {
       @include margin-bottom(14, 430);
+    }
+  }
+
+  @include media-tablet {
+    margin: 0;
+    width: 100%;
+    &:last-child {
+      margin-bottom: 80px;
     }
   }
 }

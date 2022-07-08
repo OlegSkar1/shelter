@@ -402,10 +402,14 @@ body {
 .about__wrapper {
   background-color: #fff;
   justify-content: center;
-  padding-top: 6.25%;
-  padding-left: 3.125%;
-  padding-right: 3.125%;
-  padding-bottom: 7.8125%;
+  padding: 80px 40px 100px;
+}
+@media screen and (max-width: 768px) {
+  .about__wrapper {
+    flex-direction: column-reverse;
+    padding-left: 165px;
+    padding-right: 165px;
+  }
 }
 
 .about__content {
@@ -424,6 +428,15 @@ body {
 }
 .about__content p:last-child {
   margin-bottom: 3.2558139535%;
+}
+@media screen and (max-width: 768px) {
+  .about__content {
+    margin: 0;
+    width: 100%;
+  }
+  .about__content:last-child {
+    margin-bottom: 80px;
+  }
 }
 
 .pets {
