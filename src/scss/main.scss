@@ -1,13 +1,23 @@
-@import './base/reset';
-@import './base/typography';
-@import './utils/variables';
-@import './utils/prototype';
-@import './components/buttons';
-@import './utils/mixins';
-@import './pages/home';
-@import './layout/main/header';
-@import './layout/main/about';
-@import './layout/main/pets';
-@import './layout/main/help';
-@import './layout/main/donation';
-@import './layout/main/footer';
+// Base
+@import "./base/reset";
+@import "./base/typography";
+
+//Utils
+@import "./utils/variables";
+@import "./utils/prototype";
+@import "./utils/mixins";
+
+// Components
+@import "./components/buttons";
+@import "./components/card";
+
+//Pages
+@import "./pages/home";
+
+//Layout
+@import "./layout/main/header";
+@import "./layout/main/about";
+@import "./layout/main/pets";
+@import "./layout/main/help";
+@import "./layout/main/donation";
+@import "./layout/main/footer";

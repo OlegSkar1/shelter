@@ -2,93 +2,93 @@
 
 .header {
   max-height: 908px;
-  .header__image {
-    background: url(/src/assets/img/Start_screen.jpg) top center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    padding: 60px 40px 0;
-  }
-
-  .header__wrapper {
-    @extend %flex-center;
-    width: 100%;
-    margin: 0 auto;
-
-    .header__logo {
-      a {
-        text-decoration: none;
-      }
-      h1 {
-        @extend %logo-title;
-        color: $color-primary;
-        margin-bottom: 10px;
-      }
-      p {
-        @extend %logo-subtitle;
-        color: $color-light-xl;
-      }
-    }
-
-    .header__nav {
-      a {
-        text-decoration: none;
-        @extend %paragraph-l;
-        color: $color-dark-s;
-        margin-right: 35px;
-        transition: 0.3s all;
-        &:last-child {
-          margin-right: 0;
-        }
-        &:hover {
-          color: $color-light-s;
-          transition: 0.3s all;
-        }
-        &:focus {
-          color: $color-light-s;
-          padding-bottom: 10px;
-          border-bottom: 3px solid $color-primary;
-          transition: 0.3s all;
-        }
-        &:first-child {
-          color: $color-light-s;
-          padding-bottom: 10px;
-          border-bottom: 3px solid $color-primary;
-        }
-      }
-    }
-  }
-
-  // Стартовый экран
 }
-.start-screen {
-  .start-screen__content {
-    @include width(460, 1200);
-    @include padding-top(163, 1200);
-    @include padding-bottom(243, 1200);
-    h2 {
-      @extend %h2;
-      color: $color-light-xl;
-      @include width(310, 460);
-      @include margin-bottom(42, 460);
-    }
-    p {
-      @extend %paragraph-l;
-      color: $color-dark-s;
-      @include margin-bottom(42, 460);
-    }
 
-    .start-screen_button {
-      width: 207px;
-      @extend %button;
-      color: $color-dark-3xl;
-      cursor: pointer;
+.header__wrapper {
+  @extend %flex-center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header__logo {
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    @extend %logo-title;
+    color: $color-primary;
+    margin-bottom: 10px;
+  }
+  p {
+    @extend %logo-subtitle;
+    color: $color-light-xl;
+  }
+}
+
+.header__image {
+  background: url(/src/assets/img/Start_screen.jpg) top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 60px 40px 0;
+}
+
+.header__nav {
+  a {
+    text-decoration: none;
+    @extend %paragraph-l;
+    color: $color-dark-s;
+    margin-right: 35px;
+    transition: 0.3s all;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      color: $color-light-s;
       transition: 0.3s all;
-
-      &:hover {
-        background-color: $color-primary-light;
-        transition: 0.3s all;
-      }
     }
+    &:focus {
+      color: $color-light-s;
+      padding-bottom: 10px;
+      border-bottom: 3px solid $color-primary;
+      transition: 0.3s all;
+    }
+    &:first-child {
+      color: $color-light-s;
+      padding-bottom: 10px;
+      border-bottom: 3px solid $color-primary;
+    }
+  }
+}
+
+// Start screen
+
+.start-screen__content {
+  @include width(460, 1200);
+  @include padding-top(163, 1200);
+  @include padding-bottom(243, 1200);
+  h2 {
+    @extend %h2;
+    color: $color-light-xl;
+    @include width(310, 460);
+    @include margin-bottom(42, 460);
+  }
+  p {
+    @extend %paragraph-l;
+    color: $color-dark-s;
+    @include margin-bottom(42, 460);
+  }
+}
+
+.start-screen_button {
+  width: 207px;
+  @extend %button;
+  color: $color-dark-3xl;
+  cursor: pointer;
+  transition: 0.3s all;
+
+  &:hover {
+    background-color: $color-primary-light;
+    transition: 0.3s all;
   }
 }

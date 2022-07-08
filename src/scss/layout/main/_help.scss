@@ -1,52 +1,48 @@
-.help {
+.help__wrapper {
   background: $color-light-xl;
-  width: 100%;
+  @include padding-top(80, 1280);
+  @include padding-left(40, 1280);
+  @include padding-right(40, 1280);
+  @include padding-bottom(100, 1280);
 
-  .help__wrapper {
-    @include padding-top(80, 1280);
-    @include padding-left(40, 1280);
-    @include padding-right(40, 1280);
-    @include padding-bottom(100, 1280);
-
-    h3 {
-      @extend %h3;
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-      color: $color-dark-l;
-      @include width(308, 1200);
-      @include margin-bottom(60, 1200);
-    }
-  }
-
-  .help__list {
-    @include width(1026, 1200);
+  h3 {
+    @extend %h3;
+    display: block;
     margin: 0 auto;
+    text-align: center;
+    color: $color-dark-l;
+    @include width(308, 1200);
+    @include margin-bottom(60, 1200);
   }
+}
 
-  .help__list__box_1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &:not(:last-child) {
-      margin-bottom: 55px;
-    }
-  }
-  .help__list__box_2 {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
+.list {
+  @include width(1026, 1200);
+  margin: 0 auto;
+}
 
-  .help__list_item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    p {
-      @extend %h4;
-      color: $color-dark-l;
-      padding-top: 30px;
-    }
+.list__box-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:not(:last-child) {
+    margin-bottom: 55px;
+  }
+}
+.list__box-2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    @extend %h4;
+    color: $color-dark-l;
+    padding-top: 30px;
   }
 }

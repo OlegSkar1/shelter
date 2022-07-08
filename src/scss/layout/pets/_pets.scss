@@ -17,18 +17,6 @@
   @include padding-left(40, 1280);
   @include padding-right(40, 1280);
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  @extend %grid-4-col;
   gap: 30px 40px;
-}
-
-.navigation {
-  @include width(340, 1280);
-  @include padding-top(45, 1280);
-  @include padding-bottom(100, 1280);
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }

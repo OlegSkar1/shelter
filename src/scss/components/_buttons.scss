@@ -14,6 +14,12 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s all;
+  &:hover {
+    background: $color-primary-light;
+    border: 2px solid $color-primary-light;
+    cursor: pointer;
+    transition: 0.3s all;
+  }
 }
 
 .button__paginator_inactive {
@@ -31,6 +37,7 @@
     color: $color-dark-s;
   }
 }
+
 .button__paginator_active {
   width: 52px;
   height: 52px;
@@ -47,6 +54,7 @@
     color: $color-dark-3xl;
   }
 }
+
 .button__paginator {
   width: 52px;
   height: 52px;

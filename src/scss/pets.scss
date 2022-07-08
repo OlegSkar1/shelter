@@ -1,11 +1,21 @@
-@import './base/reset';
-@import './base/typography';
-@import './utils/variables';
-@import './pages/home';
-@import './utils/prototype';
-@import './utils/mixins';
-@import './components/buttons';
-@import './components/card';
-@import './layout/pets/header';
-@import './layout/pets/pets';
-@import './layout/main/footer';
+// Base
+@import "./base/reset";
+@import "./base/typography";
+
+// Utils
+@import "./utils/variables";
+@import "./utils/prototype";
+@import "./utils/mixins";
+
+// Pages
+@import "./pages/home";
+
+//Components
+@import "./components/buttons";
+@import "./components/card";
+@import "./components/navigation";
+
+// Layout
+@import "./layout/pets/header";
+@import "./layout/pets/pets";
+@import "./layout/main/footer";

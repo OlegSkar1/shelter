@@ -1,5 +1,4 @@
 .footer {
-  width: 100%;
   background: url(/src/assets/img/noise_transparent@2x.png),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
     #211f20;
@@ -9,19 +8,14 @@
   @include padding-left(40, 1280);
   @include padding-right(40, 1280);
   @include padding-top(40, 1280);
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  @extend %flex-start;
 }
 
-.content__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
+.content-container {
   @include margin-top(15, 1200);
   @include margin-bottom(60, 1200);
+  @extend %flex-start;
+  flex-direction: column;
 
   h3 {
     @extend %h3;
@@ -29,10 +23,9 @@
   }
 
   a {
+    @extend %h4;
     @extend %flex-center;
     justify-content: flex-start;
-
-    @extend %h4;
 
     color: $color-primary;
     text-decoration: none;
@@ -41,28 +34,28 @@
       padding-right: 20px;
     }
   }
-
-  .phone,
-  .mail {
-    @include padding-top(40, 278);
-  }
-
-  .boston_maps {
-    @include padding-top(33, 302);
-  }
-
-  .london_maps {
-    @include padding-top(33, 302);
-  }
 }
 
-.content__container_locate {
+.content-container__locate {
   @include width(302, 1200);
-  .locate_title {
+  .locate__title {
     @include width(270, 302);
   }
 }
 
-.content__container_contact {
+.content-container__contact {
   @include width(278, 1200);
+}
+
+.contact__phone,
+.contact__mail {
+  @include padding-top(40, 278);
+}
+
+.locate__boston-maps {
+  @include padding-top(33, 302);
+}
+
+.locate__london-maps {
+  @include padding-top(33, 302);
 }

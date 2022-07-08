@@ -1,37 +1,30 @@
-.about {
-  width: 100%;
+.about__wrapper {
   background-color: $color-light-xl;
-  height: auto;
-  .about__wrapper {
-    @extend %flex-center;
-    justify-content: center;
-    @include padding-top(80, 1280);
-    @include padding-left(40, 1280);
-    @include padding-right(40, 1280);
-    @include padding-bottom(100, 1280);
-    .about__content {
-      @include width(430, 1200);
-      @include margin-left(120, 1200);
-      h3 {
-        @extend %h3;
-        color: $color-dark-l;
-        @include width(370, 430);
-        @include margin-top(14, 430);
-        @include margin-bottom(25, 430);
-      }
+  @extend %flex-center;
+  justify-content: center;
+  @include padding-top(80, 1280);
+  @include padding-left(40, 1280);
+  @include padding-right(40, 1280);
+  @include padding-bottom(100, 1280);
+}
 
-      p {
-        @extend %paragraph-l;
-        color: $color-dark-xl;
-        @include margin-bottom(25, 430);
-        &:last-child {
-          @include margin-bottom(14, 430);
-        }
-      }
+.about__content {
+  @include width(430, 1200);
+  @include margin-left(120, 1200);
+  h3 {
+    @extend %h3;
+    color: $color-dark-l;
+    @include width(370, 430);
+    @include margin-top(14, 430);
+    @include margin-bottom(25, 430);
+  }
+
+  p {
+    @extend %paragraph-l;
+    color: $color-dark-xl;
+    @include margin-bottom(25, 430);
+    &:last-child {
+      @include margin-bottom(14, 430);
     }
   }
-}
-.about__img {
-  @include width(300, 1200);
-  height: auto;
 }

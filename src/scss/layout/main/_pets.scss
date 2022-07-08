@@ -1,88 +1,40 @@
 .pets {
   background-color: $color-light-l;
-
-  .pets__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include padding-top(80, 1280);
-    @include padding-left(40, 1280);
-    @include padding-right(40, 1280);
-    @include padding-bottom(100, 1280);
-
-    h3 {
-      @extend %h3;
-      text-align: center;
-      color: $color-dark-l;
-      @include width(400, 1200);
-      @include margin-bottom(60, 1200);
-    }
-
-    .pets__slider {
-      width: 100%;
-      @extend %flex-center;
-    }
-
-    .pets__button {
-      @extend %button;
-      color: $color-dark-3xl;
-      width: 261px;
-      cursor: pointer;
-      transition: 0.3s all;
-      &:hover {
-        background: $color-primary-light;
-        transition: 0.3s all;
-      }
-    }
-
-    .wrapper_arrow:hover {
-      background: $color-primary-light;
-      border: 2px solid $color-primary-light;
-      cursor: pointer;
-      transition: 0.3s all;
-    }
-  }
 }
 
-.slider__card {
+.pets__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $color-light-s;
-  border-radius: 9px;
+
+  @include padding-top(80, 1280);
+  @include padding-left(40, 1280);
+  @include padding-right(40, 1280);
+  @include padding-bottom(100, 1280);
+
+  h3 {
+    @extend %h3;
+    text-align: center;
+    color: $color-dark-l;
+    @include width(400, 1200);
+    @include margin-bottom(60, 1200);
+  }
+}
+
+.pets__slider {
+  width: 100%;
+  @extend %flex-center;
   @include margin-bottom(60, 1200);
+}
+
+.pets__button {
+  @extend %button;
+  color: $color-dark-3xl;
+  width: 261px;
   cursor: pointer;
   transition: 0.3s all;
   &:hover {
-    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-    background-color: $color-light-xl;
-    transition: 0.3s all;
-    .button__more {
-      background: $color-primary-light;
-      border: 2px solid $color-primary-light;
-      transition: 0.3s all;
-    }
-  }
-
-  .pets__img {
-    @include margin-bottom(30, 270);
-  }
-
-  p {
-    @extend %h4;
-    color: $color-dark-l;
-    @include margin-bottom(30, 270);
-  }
-
-  .button__more {
-    background: transparent;
-    border: 2px solid $color-primary;
-    width: 187px;
-    color: $color-dark-3xl;
-    @extend %button;
-    @include margin-bottom(30, 270);
-    cursor: pointer;
+    background: $color-primary-light;
     transition: 0.3s all;
   }
 }
