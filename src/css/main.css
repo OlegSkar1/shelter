@@ -293,15 +293,6 @@ body {
   margin: 0 auto;
 }
 
-.header {
-  max-height: 908px;
-}
-@media screen and (max-width: 768px) {
-  .header {
-    max-height: 1165px;
-  }
-}
-
 .header__wrapper {
   padding: 60px 40px 0;
 }
@@ -352,13 +343,15 @@ body {
 }
 
 .start-screen {
+  align-items: flex-end;
   padding: 60px 40px 0;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .start-screen {
     flex-direction: column;
+    align-items: center;
     padding: 60px 30px 0;
-    max-height: 1015px;
     overflow: hidden;
   }
 }
