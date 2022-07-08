@@ -10,7 +10,6 @@
   @include padding-left(40, 1280);
   @include padding-right(40, 1280);
   @include padding-top(40, 1280);
-  // max-height: 310px;
 
   display: flex;
   justify-content: space-between;
@@ -26,10 +25,9 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @include padding-top(16, 1200);
+  @include margin-top(16, 1200);
   @include margin-bottom(60, 1200);
   @include height(234, 1200);
-  // height: 234px;
 
   a {
     @extend %flex-center;
@@ -43,6 +41,19 @@
     img {
       padding-right: 20px;
     }
+  }
+
+  .phone,
+  .mail {
+    @include padding-top(40, 270);
+  }
+
+  .boston_maps {
+    @include padding-top(34, 302);
+  }
+
+  .london_maps {
+    @include padding-top(32, 302);
   }
 }
 
