@@ -33,3 +33,11 @@
 @mixin height($px, $parent) {
   height: calc(($px / $parent) * 100%);
 }
+
+// Media queries
+
+@mixin media-tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}

@@ -1,5 +1,8 @@
 //цвета
 $background: #e5e5e5;
+$background-gradient: url(/src/assets/img/noise_transparent@2x.png),
+  radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+  #211f20;
 
 $color-primary: #f1cdb3;
 $color-primary-light: #fddcc4;
