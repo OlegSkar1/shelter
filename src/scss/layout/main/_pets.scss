@@ -12,19 +12,34 @@
   @include padding-right(40, 1280);
   @include padding-bottom(100, 1280);
 
+  @include media-tablet {
+    padding: 80px 30px 100px;
+  }
+
   h3 {
     @extend %h3;
     text-align: center;
     color: $color-dark-l;
     @include width(400, 1200);
     @include margin-bottom(60, 1200);
+
+    @include media-tablet {
+      width: 100%;
+      padding: 0 154px 60px;
+    }
   }
 }
 
 .pets__slider {
   width: 100%;
   @extend %flex-center;
-  @include margin-bottom(60, 1200);
+  margin-bottom: 60px;
+
+  @include media-tablet {
+    #pet-3 {
+      display: none;
+    }
+  }
 }
 
 .pets__button {

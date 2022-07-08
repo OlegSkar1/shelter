@@ -72,6 +72,8 @@
 }
 
 .start-screen__content {
+  @extend %flex-start;
+  flex-direction: column;
   @include width(460, 1200);
   @include padding-top(163, 1200);
   @include padding-bottom(243, 1200);
@@ -94,10 +96,11 @@
     color: $color-dark-s;
     @include margin-bottom(42, 460);
   }
-  a {
-    width: 207px;
-    margin: auto;
-    display: block;
+
+  @include media-tablet {
+    a {
+      align-self: center;
+    }
   }
 }
 
