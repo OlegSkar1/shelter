@@ -620,12 +620,25 @@ body {
   padding-left: 3.125%;
   padding-right: 3.125%;
   padding-top: 3.125%;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .footer__wrapper {
+    padding: 30px 30px 0;
+    justify-content: center;
+    gap: 65px 60px;
+  }
 }
 
 .content-container {
   margin-top: 1.25%;
   margin-bottom: 5%;
   flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .content-container {
+    margin: 0;
+  }
 }
 .content-container h3 {
   color: #fff;
@@ -640,27 +653,27 @@ body {
 }
 
 .content-container__locate {
-  width: 25.1666666667%;
+  width: 302px;
 }
 .content-container__locate .locate__title {
-  width: 89.4039735099%;
+  width: 270px;
 }
 
 .content-container__contact {
-  width: 23.1666666667%;
+  width: 278px;
 }
 
 .contact__phone,
 .contact__mail {
-  padding-top: 14.3884892086%;
+  padding-top: 40px;
 }
 
 .locate__boston-maps {
-  padding-top: 10.9271523179%;
+  padding-top: 33px;
 }
 
 .locate__london-maps {
-  padding-top: 10.9271523179%;
+  padding-top: 33px;
 }
 
 /*# sourceMappingURL=main.css.map */
