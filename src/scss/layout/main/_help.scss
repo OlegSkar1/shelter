@@ -5,6 +5,10 @@
   @include padding-right(40, 1280);
   @include padding-bottom(100, 1280);
 
+  @include media-tablet {
+    padding: 80px 69px 100px;
+  }
+
   h3 {
     @extend %h3;
     display: block;
@@ -12,30 +16,29 @@
     text-align: center;
     color: $color-dark-l;
     @include width(308, 1200);
-    @include margin-bottom(60, 1200);
+    margin-bottom: 60px;
+
+    @include media-tablet {
+      width: 308px;
+    }
   }
 }
 
 .list {
-  @include width(1026, 1200);
-  margin: 0 auto;
-}
+  padding: 0 86px;
+  @extend %flex-center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 55px 120px;
 
-.list__box-1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  &:not(:last-child) {
-    margin-bottom: 55px;
+  @include media-tablet {
+    padding: 0;
+    gap: 55px 60px;
   }
-}
-.list__box-2 {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
 .list__item {
+  width: 170px;
   display: flex;
   flex-direction: column;
   justify-content: center;
