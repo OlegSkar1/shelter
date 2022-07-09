@@ -9,6 +9,11 @@
     @include padding-bottom(45, 1280);
     @include padding-top(80, 1280);
     margin: 0 auto;
+
+    @include media-tablet {
+      width: 400px;
+      padding-bottom: 30px;
+    }
   }
 }
 
@@ -19,4 +24,20 @@
 
   @extend %grid-4-col;
   gap: 30px 40px;
+
+  @include media-tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 94px 40px;
+  }
+}
+
+.pets__navigation {
+  @include width(340, 1280);
+  @include padding-bottom(100, 1280);
+
+  @include media-tablet {
+    width: 340px;
+    padding-bottom: 76px;
+  }
 }

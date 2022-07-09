@@ -1,7 +1,4 @@
 .navigation {
-  @include width(340, 1280);
-  @include padding-top(45, 1280);
-  @include padding-bottom(100, 1280);
   @extend %flex-center;
   margin: 0 auto;
 }

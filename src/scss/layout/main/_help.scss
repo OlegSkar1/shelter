@@ -38,7 +38,6 @@
 }
 
 .list__item {
-  width: 170px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,5 +46,9 @@
     @extend %h4;
     color: $color-dark-l;
     padding-top: 30px;
+  }
+
+  @include media-tablet {
+    width: 170px;
   }
 }
