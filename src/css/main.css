@@ -91,7 +91,7 @@ select {
   src: url("/src/assets/fonts/tinos-v24-latin-italic.eot"); /* IE9 Compat Modes */
   src: local(""), url("/src/assets/fonts/tinos-v24-latin-italic.eot?#iefix") format("embedded-opentype"), url("/src/assets/fonts/tinos-v24-latin-italic.woff2") format("woff2"), url("/src/assets/fonts/tinos-v24-latin-italic.woff") format("woff"), url("/src/assets/fonts/tinos-v24-latin-italic.ttf") format("truetype"), url("/src/assets/fonts/tinos-v24-latin-italic.svg#Tinos") format("svg"); /* Legacy iOS */
 }
-.content-container a, .donation__card, .donation__wrapper, .list, .pets__slider, .about__wrapper, .start-screen, .header__wrapper {
+.content-container a, .donation__wrapper, .list, .pets__slider, .about__wrapper, .start-screen, .header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -550,9 +550,22 @@ body {
   padding-left: 14.2578125%;
   padding-right: 14.2578125%;
 }
+@media screen and (max-width: 768px) {
+  .donation__wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 80px 0 100px;
+  }
+}
 
 .donation__content {
   width: 41.5300546448%;
+}
+@media screen and (max-width: 768px) {
+  .donation__content {
+    width: 380px;
+    margin-bottom: 60px;
+  }
 }
 .donation__content h3 {
   display: block;
@@ -560,14 +573,27 @@ body {
   width: 78.9473684211%;
   margin-bottom: 5.2631578947%;
 }
+@media screen and (max-width: 768px) {
+  .donation__content h3 {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+}
 
 .donation__subtitle {
   color: #545454;
   margin-bottom: 5.2631578947%;
 }
+@media screen and (max-width: 768px) {
+  .donation__subtitle {
+    margin-bottom: 20px;
+  }
+}
 
 .donation__card {
-  width: 83.9473684211%;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 5.2631578947%;
   padding: 10px 15px;
   background: #f1cdb3;
@@ -576,6 +602,10 @@ body {
 }
 .donation__card span {
   color: #545454;
+}
+
+.card__img {
+  margin-right: 15px;
 }
 
 .donation__desc {

@@ -5,10 +5,20 @@
   @include padding-left(182.5, 1280);
   @include padding-right(182.5, 1280);
   @extend %flex-center;
+
+  @include media-tablet {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 80px 0 100px;
+  }
 }
 
 .donation__content {
   @include width(380, 915);
+  @include media-tablet {
+    width: 380px;
+    margin-bottom: 60px;
+  }
 
   h3 {
     display: block;
@@ -16,6 +26,10 @@
     color: $color-dark-l;
     @include width(300, 380);
     @include margin-bottom(20, 380);
+    @include media-tablet {
+      width: 300px;
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -23,12 +37,16 @@
   @extend %h5;
   color: $color-dark-l;
   @include margin-bottom(20, 380);
+  @include media-tablet {
+    margin-bottom: 20px;
+  }
 }
 
 .donation__card {
-  @include width(319, 380);
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
   @include margin-bottom(20, 380);
-  @extend %flex-center;
   padding: 10px 15px;
   background: $color-primary;
   border-radius: 9px;
@@ -38,6 +56,10 @@
     @extend %h4;
     color: $color-dark-l;
   }
+}
+
+.card__img {
+  margin-right: 15px;
 }
 
 .donation__desc {
