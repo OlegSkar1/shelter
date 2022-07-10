@@ -11,33 +11,59 @@
     padding-left: 165px;
     padding-right: 165px;
   }
+
+  @include media-mobile {
+    flex-direction: column-reverse;
+    padding: 42px 10px;
+  }
 }
 
 .about__content {
   @include width(430, 1200);
   @include margin-left(120, 1200);
+
+  @include media-tablet {
+    margin: 0;
+    width: 437px;
+    &:last-child {
+      margin-bottom: 80px;
+    }
+  }
+
+  @include media-mobile {
+    width: 300px;
+    margin: 0;
+    padding-bottom: 42px;
+  }
+
   h3 {
     @extend %h3;
     color: $color-dark-l;
     @include width(370, 430);
-    @include margin-top(14, 430);
-    @include margin-bottom(25, 430);
+    margin-top: 14px;
+    margin-bottom: 25px;
+
+    @include media-mobile {
+      width: 100%;
+      font-size: 25px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
   }
 
   p {
     @extend %paragraph-l;
     color: $color-dark-xl;
-    @include margin-bottom(25, 430);
+    margin-bottom: 25px;
     &:last-child {
-      @include margin-bottom(14, 430);
+      margin-bottom: 14px;
     }
-  }
 
-  @include media-tablet {
-    margin: 0;
-    width: 100%;
-    &:last-child {
-      margin-bottom: 80px;
+    @include media-mobile {
+      margin-bottom: 22px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
