@@ -1,3 +1,8 @@
+.help {
+  width: 100%;
+  background: $color-light-xl;
+}
+
 .help__wrapper {
   background: $color-light-xl;
   @include padding-top(80, 1280);

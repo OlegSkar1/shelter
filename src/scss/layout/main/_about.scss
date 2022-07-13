@@ -1,5 +1,9 @@
-.about__wrapper {
+.about {
+  width: 100%;
   background-color: $color-light-xl;
+}
+
+.about__wrapper {
   @extend %flex-center;
   justify-content: center;
 
@@ -13,6 +17,8 @@
   }
 
   @include media-mobile {
+    width: 320px;
+    margin: auto;
     flex-direction: column-reverse;
     padding: 42px 10px;
   }
