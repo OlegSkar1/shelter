@@ -400,6 +400,14 @@ body {
     gap: 65px 60px;
   }
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer__wrapper {
+    align-items: center;
+    width: 320px;
+    margin: auto;
+    padding: 30px 10px 0;
+  }
+}
 
 .content-container {
   margin-top: 1.25%;
@@ -411,8 +419,22 @@ body {
     margin: 0;
   }
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .content-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+}
 .content-container h3 {
   color: #fff;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .content-container h3 {
+    width: 100%;
+    font-size: 25px;
+  }
 }
 .content-container a {
   justify-content: flex-start;
@@ -429,9 +451,21 @@ body {
 .content-container__locate .locate__title {
   width: 270px;
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .content-container__locate {
+    align-items: center;
+    width: 300px;
+  }
+}
 
 .content-container__contact {
   width: 278px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .content-container__contact {
+    width: 300px;
+    padding: 0;
+  }
 }
 
 .contact__phone,
@@ -442,9 +476,26 @@ body {
 .locate__boston-maps {
   padding-top: 33px;
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .locate__boston-maps {
+    width: 100%;
+    padding-top: 40px;
+  }
+}
 
 .locate__london-maps {
   padding-top: 33px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .locate__london-maps {
+    width: 100%;
+    padding-top: 40px;
+  }
+}
+
+.content-container__img {
+  width: 260px;
+  margin: auto;
 }
 
 /*# sourceMappingURL=pets.css.map */
