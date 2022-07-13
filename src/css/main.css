@@ -552,6 +552,8 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .pets__wrapper {
+    width: 768px;
+    margin: auto;
     padding: 80px 30px 100px;
   }
 }
@@ -640,6 +642,8 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .help__wrapper {
+    width: 768px;
+    margin: auto;
     padding: 80px 69px 100px;
   }
 }
@@ -838,6 +842,7 @@ body {
 }
 
 .footer {
+  width: 100%;
   background: url(/src/assets/img/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
 }
 
@@ -849,6 +854,8 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer__wrapper {
+    width: 768px;
+    margin: auto;
     padding: 30px 30px 0;
     justify-content: center;
     gap: 65px 60px;

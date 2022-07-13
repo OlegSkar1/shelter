@@ -11,6 +11,8 @@
   @include padding-bottom(100, 1280);
 
   @include media-tablet {
+    width: 768px;
+    margin: auto;
     padding: 80px 69px 100px;
   }
   @include media-mobile {

@@ -2,6 +2,10 @@
   position: sticky;
   top: 0;
 
+  @include media-mobile {
+    padding: 30px 50px 30px 10px;
+  }
+
   @extend %flex-center;
   @include padding-top(30, 1280);
   @include padding-bottom(30, 1280);
@@ -49,6 +53,17 @@
         padding-bottom: 10px;
         border-bottom: 3px solid $color-primary;
       }
+    }
+    @include media-mobile {
+      display: none;
+    }
+  }
+}
+
+.burger {
+  @include media-mobile {
+    span {
+      background: #000;
     }
   }
 }

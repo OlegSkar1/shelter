@@ -10,6 +10,8 @@
   padding: 80px 40px 100px;
 
   @include media-tablet {
+    width: 768px;
+    margin: auto;
     padding: 80px 30px 100px;
   }
 
