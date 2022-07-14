@@ -62,7 +62,9 @@
 
 .burger {
   @include media-mobile {
-    span {
+    span,
+    &:before,
+    &:after {
       background: #000;
     }
   }
