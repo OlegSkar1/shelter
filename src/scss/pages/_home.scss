@@ -4,9 +4,29 @@ html {
 body {
   max-width: 1280px;
   margin: 0 auto;
+
   @include media-mobile {
+    &.lock:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background: rgba(41, 41, 41, 0.6);
+      animation-duration: 0.3s;
+      animation-name: background;
+    }
     &.lock {
       overflow: hidden;
+    }
+  }
+}
+
+main {
+  @include media-mobile {
+    & > {
+      background: rgba(41, 41, 41, 0.6);
     }
   }
 }

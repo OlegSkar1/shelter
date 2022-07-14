@@ -107,6 +107,8 @@
 }
 
 .content-container__img {
-  width: 260px;
-  margin: auto;
+  @include media-mobile {
+    width: 260px;
+    margin: auto;
+  }
 }

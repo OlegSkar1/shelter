@@ -177,6 +177,14 @@ select {
   letter-spacing: 0.06em;
 }
 
+@keyframes background {
+  from {
+    background: rgba(41, 41, 41, 0);
+  }
+  to {
+    background: rgba(41, 41, 41, 0.6);
+  }
+}
 .pet-card {
   display: flex;
   flex-direction: column;
@@ -345,8 +353,25 @@ body {
   margin: 0 auto;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  body.lock:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(41, 41, 41, 0.6);
+    animation-duration: 0.3s;
+    animation-name: background;
+  }
   body.lock {
     overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  main > {
+    background: rgba(41, 41, 41, 0.6);
   }
 }
 
@@ -1024,9 +1049,11 @@ body {
   }
 }
 
-.content-container__img {
-  width: 260px;
-  margin: auto;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .content-container__img {
+    width: 260px;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
