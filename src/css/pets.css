@@ -237,38 +237,36 @@ body {
   transition: 0.3s all;
 }
 
+.burger span, .burger:before, .burger:after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #f1cdb3;
+}
+
 .burger {
   display: none;
   position: relative;
   width: 30px;
   height: 22px;
 }
+.burger:before, .burger:after {
+  content: "";
+}
+.burger span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.burger:before {
+  top: 0;
+}
+.burger:after {
+  bottom: 0;
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .burger {
     display: block;
-  }
-  .burger:before, .burger:after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #f1cdb3;
-  }
-  .burger span {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: #f1cdb3;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .burger:before {
-    top: 0;
-  }
-  .burger:after {
-    bottom: 0;
   }
 }
 
