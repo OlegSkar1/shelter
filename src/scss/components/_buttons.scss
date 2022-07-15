@@ -93,7 +93,6 @@
 
 .burger {
   display: none;
-  position: relative;
   width: 30px;
   height: 22px;
   &:before,
@@ -118,21 +117,25 @@
 
   @include media-mobile {
     display: block;
+    position: relative;
   }
-}
 
-.burger.active {
-  &:before {
-    transform: rotate(90deg);
-    top: 11px;
-    left: 9px;
-  }
-  &:after {
-    transform: rotate(90deg);
-    top: 11px;
-    right: 9px;
-  }
-  span {
-    transform: rotate(90deg);
+  &.active {
+    position: absolute;
+    top: 45px;
+    right: 53px;
+    &:before {
+      transform: rotate(90deg);
+      top: 11px;
+      left: 9px;
+    }
+    &:after {
+      transform: rotate(90deg);
+      top: 11px;
+      right: 9px;
+    }
+    span {
+      transform: rotate(90deg);
+    }
   }
 }
