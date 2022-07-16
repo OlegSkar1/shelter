@@ -4,29 +4,22 @@ html {
 body {
   max-width: 1280px;
   margin: 0 auto;
+  position: relative;
 
   @include media-mobile {
-    &.lock:before {
-      content: '';
-      position: absolute;
+    &.lock:after {
+      content: "";
+      position: fixed;
       width: 100%;
       height: 100vh;
       top: 0;
       left: 0;
-      background: rgba(41, 41, 41, 0.6);
+      background: $blackout;
       animation-duration: 0.3s;
       animation-name: background;
     }
     &.lock {
       overflow: hidden;
-    }
-  }
-}
-
-main {
-  @include media-mobile {
-    & > {
-      background: rgba(41, 41, 41, 0.6);
     }
   }
 }

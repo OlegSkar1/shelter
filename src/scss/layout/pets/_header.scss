@@ -1,71 +1,104 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
+  background: $color-light-xl;
 
+  &.header_active {
+    position: absolute;
+  }
+}
+
+.header__wrapper {
+  position: relative;
+  @extend %flex-center;
+  padding: 30px 40px;
+
+  @include media-tablet {
+    padding: 30px 30px;
+  }
   @include media-mobile {
     padding: 30px 50px 30px 10px;
   }
+}
 
-  @extend %flex-center;
-  @include padding-top(30, 1280);
-  @include padding-bottom(30, 1280);
-  @include padding-left(40, 1280);
-  @include padding-right(40, 1280);
-  background: $color-light-xl;
+.header__logo {
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    @extend %logo-title;
+    color: $color-dark-l;
+    margin-bottom: 10px;
+  }
+  p {
+    @extend %logo-subtitle;
+    color: $color-dark-3xl;
+  }
+}
+
+.header__nav {
+  z-index: 1;
+  @extend %header__nav;
+  @extend %header__nav-active;
 
   .header__logo {
-    a {
-      text-decoration: none;
-    }
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 10px;
     h1 {
-      @extend %logo-title;
-      color: $color-dark-l;
-      margin-bottom: 10px;
+      color: $color-primary;
     }
     p {
-      @extend %logo-subtitle;
+      color: $color-light-xl;
+    }
+  }
+
+  a {
+    color: $color-dark-l;
+
+    &:hover {
+      color: $color-dark-3xl;
+    }
+    &:focus {
+      color: $color-dark-3xl;
+    }
+    &.active {
       color: $color-dark-3xl;
     }
   }
 
-  .header__nav {
+  @include media-mobile {
     a {
-      text-decoration: none;
-      @extend %paragraph-l;
-      color: $color-dark-l;
-      margin-right: 35px;
-      transition: 0.3s all;
-      &:last-child {
-        margin-right: 0;
-      }
+      color: $color-dark-s;
+
       &:hover {
-        color: $color-dark-3xl;
-        transition: 0.3s all;
+        color: $color-light-s;
       }
       &:focus {
-        color: $color-dark-3xl;
-        padding-bottom: 10px;
-        border-bottom: 3px solid $color-primary;
-        transition: 0.3s all;
+        color: $color-light-s;
       }
-      &:nth-child(2) {
-        color: $color-dark-3xl;
-        padding-bottom: 10px;
-        border-bottom: 3px solid $color-primary;
+      &.active {
+        color: $color-light-s;
       }
-    }
-    @include media-mobile {
-      display: none;
     }
   }
 }
 
 .burger {
-  @include media-mobile {
+  span,
+  &:before,
+  &:after {
+    background: #000;
+  }
+
+  &.active {
+    position: fixed;
     span,
     &:before,
     &:after {
-      background: #000;
+      background: #fff;
     }
   }
 }

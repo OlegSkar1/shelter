@@ -6,6 +6,7 @@
 @import "./utils/variables";
 @import "./utils/prototype";
 @import "./utils/mixins";
+@import "./utils/animation";
 
 // Pages
 @import "./pages/home";
@@ -14,6 +15,7 @@
 @import "./components/buttons";
 @import "./components/card";
 @import "./components/navigation";
+@import "./components/header_nav";
 
 // Layout
 @import "./layout/pets/header";

@@ -9,20 +9,26 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__logo">
-        <a href="/src/pages/main/index.html">
-          <h1>Cozy House</h1>
-          <p>Shelter for pets in Boston</p>
-        </a>
-      </div>
-      <nav class="header__nav">
-        <a href="../main/index.html"> About the shelter </a>
-        <a href="#pets"> Our pets </a>
-        <a href="/src/pages/main/index.html#help"> Help the shelter</a>
-        <a href="#footer"> Contacts </a>
-      </nav>
-      <div class="burger">
-        <span></span>
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <a href="/src/pages/main/index.html">
+            <h1>Cozy House</h1>
+            <p>Shelter for pets in Boston</p>
+          </a>
+        </div>
+        <nav class="header__nav">
+          <a href="../main/index.html" class="header__link">
+            About the shelter
+          </a>
+          <a href="#pets" class="header__link active"> Our pets </a>
+          <a href="/src/pages/main/index.html#help" class="header__link">
+            Help the shelter</a
+          >
+          <a href="#footer" class="header__link"> Contacts </a>
+        </nav>
+        <div class="burger">
+          <span></span>
+        </div>
       </div>
     </header>
 
@@ -161,6 +167,6 @@
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="../main/js/burgerMenu.js"></script>
   </body>
 </html>
