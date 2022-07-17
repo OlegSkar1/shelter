@@ -419,6 +419,7 @@ body {
 }
 .header.header_active {
   position: absolute;
+  height: 120px;
 }
 
 .header__wrapper {
@@ -521,7 +522,7 @@ body {
   .pets h3 {
     font-size: 25px;
     width: 100%;
-    padding: 42px 0;
+    padding: 162px 0 42px;
   }
 }
 

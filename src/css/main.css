@@ -440,6 +440,9 @@ body {
   .header__wrapper {
     padding: 30px 53px 60px 10px;
   }
+  .header__wrapper.active {
+    padding-top: 90px;
+  }
 }
 
 .header__logo a {

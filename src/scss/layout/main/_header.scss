@@ -10,6 +10,9 @@
   }
   @include media-mobile {
     padding: 30px 53px 60px 10px;
+    &.active {
+      padding-top: 90px;
+    }
   }
 }
 
