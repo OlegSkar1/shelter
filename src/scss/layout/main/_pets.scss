@@ -46,17 +46,7 @@
   @extend %flex-center;
   margin-bottom: 60px;
 
-  @include media-tablet {
-    #pet-3 {
-      display: none;
-    }
-  }
-
   @include media-mobile {
-    #pet-3,
-    #pet-2 {
-      display: none;
-    }
     margin-bottom: 42px;
     row-gap: 20px;
     flex-wrap: wrap;
@@ -74,6 +64,26 @@
       margin-left: auto;
     }
   }
+
+  .pet-card__container {
+    @extend %flex-center;
+    column-gap: 90px;
+    @include media-tablet {
+      column-gap: 40px;
+    }
+  }
+
+  .pets-carousel__wrapper {
+    width: 990px;
+    margin: auto;
+    overflow: hidden;
+
+    .pets-carousel {
+      display: flex;
+      position: relative;
+      left: -100%;
+    }
+  }
 }
 
 .pets__button {
@@ -86,4 +96,13 @@
     background: $color-primary-light;
     transition: 0.3s all;
   }
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 1s;
+}
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 1s;
 }

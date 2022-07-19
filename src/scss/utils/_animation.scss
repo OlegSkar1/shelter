@@ -1,8 +1,27 @@
+//background color
 @keyframes background {
   from {
     background: rgba(41, 41, 41, 0);
   }
   to {
     background: rgba(41, 41, 41, 0.6);
+  }
+}
+
+// slider animation
+@keyframes move-right {
+  from {
+    left: -100%;
+  }
+  to {
+    left: -200%;
+  }
+}
+@keyframes move-left {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
   }
 }

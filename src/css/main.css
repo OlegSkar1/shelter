@@ -91,7 +91,7 @@ select {
   src: url("/src/assets/fonts/tinos-v24-latin-italic.eot"); /* IE9 Compat Modes */
   src: local(""), url("/src/assets/fonts/tinos-v24-latin-italic.eot?#iefix") format("embedded-opentype"), url("/src/assets/fonts/tinos-v24-latin-italic.woff2") format("woff2"), url("/src/assets/fonts/tinos-v24-latin-italic.woff") format("woff"), url("/src/assets/fonts/tinos-v24-latin-italic.ttf") format("truetype"), url("/src/assets/fonts/tinos-v24-latin-italic.svg#Tinos") format("svg"); /* Legacy iOS */
 }
-.content-container a, .donation__wrapper, .list, .pets__slider, .about__wrapper, .start-screen, .header__wrapper {
+.content-container a, .donation__wrapper, .list, .pets__slider .pet-card__container, .pets__slider, .about__wrapper, .start-screen, .header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -185,9 +185,28 @@ select {
     background: rgba(41, 41, 41, 0.6);
   }
 }
+@keyframes move-right {
+  from {
+    left: -100%;
+  }
+  to {
+    left: -200%;
+  }
+}
+@keyframes move-left {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
 .pet-card {
+  width: 270px;
+  height: 435px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: #fafafa;
   border-radius: 9px;
@@ -205,18 +224,18 @@ select {
   transition: 0.3s all;
 }
 .pet-card .pets__img {
-  margin-bottom: 11.1111111111%;
+  margin-bottom: 30px;
 }
 .pet-card p {
   color: #545454;
-  margin-bottom: 11.1111111111%;
+  margin-bottom: 30px;
 }
 .pet-card .button__more {
   background: transparent;
   border: 2px solid #f1cdb3;
   width: 187px;
   color: #292929;
-  margin-bottom: 11.1111111111%;
+  margin-bottom: 30px;
   cursor: pointer;
   transition: 0.3s all;
 }
@@ -687,11 +706,6 @@ body {
   width: 100%;
   margin-bottom: 60px;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .pets__slider #pet-3 {
-    display: none;
-  }
-}
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .pets__slider {
     margin-bottom: 42px;
@@ -699,10 +713,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 15px;
-  }
-  .pets__slider #pet-3,
-.pets__slider #pet-2 {
-    display: none;
   }
   .pets__slider .slider__arrow_left {
     order: 1;
@@ -715,6 +725,24 @@ body {
     margin-left: auto;
   }
 }
+.pets__slider .pet-card__container {
+  column-gap: 90px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .pets__slider .pet-card__container {
+    column-gap: 40px;
+  }
+}
+.pets__slider .pets-carousel__wrapper {
+  width: 990px;
+  margin: auto;
+  overflow: hidden;
+}
+.pets__slider .pets-carousel__wrapper .pets-carousel {
+  display: flex;
+  position: relative;
+  left: -100%;
+}
 
 .pets__button {
   color: #292929;
@@ -725,6 +753,16 @@ body {
 .pets__button:hover {
   background: #fddcc4;
   transition: 0.3s all;
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 1s;
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 1s;
 }
 
 .help {

@@ -1,6 +1,9 @@
 .pet-card {
+  width: 270px;
+  height: 435px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: $color-light-s;
   border-radius: 9px;
@@ -18,13 +21,13 @@
   }
 
   .pets__img {
-    @include margin-bottom(30, 270);
+    margin-bottom: 30px;
   }
 
   p {
     @extend %h4;
     color: $color-dark-l;
-    @include margin-bottom(30, 270);
+    margin-bottom: 30px;
   }
 
   .button__more {
@@ -33,7 +36,7 @@
     width: 187px;
     color: $color-dark-3xl;
     @extend %button;
-    @include margin-bottom(30, 270);
+    margin-bottom: 30px;
     cursor: pointer;
     transition: 0.3s all;
   }

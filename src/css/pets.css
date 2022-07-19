@@ -165,6 +165,22 @@ select {
     background: rgba(41, 41, 41, 0.6);
   }
 }
+@keyframes move-right {
+  from {
+    left: -100%;
+  }
+  to {
+    left: -200%;
+  }
+}
+@keyframes move-left {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
 html {
   background-color: #e5e5e5;
 }
@@ -316,8 +332,11 @@ body {
 }
 
 .pet-card {
+  width: 270px;
+  height: 435px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: #fafafa;
   border-radius: 9px;
@@ -335,18 +354,18 @@ body {
   transition: 0.3s all;
 }
 .pet-card .pets__img {
-  margin-bottom: 11.1111111111%;
+  margin-bottom: 30px;
 }
 .pet-card p {
   color: #545454;
-  margin-bottom: 11.1111111111%;
+  margin-bottom: 30px;
 }
 .pet-card .button__more {
   background: transparent;
   border: 2px solid #f1cdb3;
   width: 187px;
   color: #292929;
-  margin-bottom: 11.1111111111%;
+  margin-bottom: 30px;
   cursor: pointer;
   transition: 0.3s all;
 }
