@@ -2,7 +2,7 @@ const petsData = [
   {
     id:1,
     name: "Jennifer",
-    img: "src/assets/img/pets-jennifer.png",
+    img: "/src/assets/img/pets-jennifer.png",
     type: "Dog",
     breed: "Labrador",
     description:
@@ -15,7 +15,7 @@ const petsData = [
   {
     id:2,
     name: "Sophia",
-    img: "src\assets\img\pets-sophia.png",
+    img: "/src/assets/img/pets-sophia.png",
     type: "Dog",
     breed: "Shih tzu",
     description:
@@ -28,7 +28,7 @@ const petsData = [
   {
     id:3,
     name: "Woody",
-    img: "src\assets\img\pets-woody.png",
+    img: "/src/assets/img/pets-woody.png",
     type: "Dog",
     breed: "Golden Retriever",
     description:
@@ -41,7 +41,7 @@ const petsData = [
   {
     id:4,
     name: "Scarlett",
-    img: "src\assets\img\pets-scarlet.png",
+    img: "/src/assets/img/pets-scarlet.png",
     type: "Dog",
     breed: "Jack Russell Terrier",
     description:
@@ -54,7 +54,7 @@ const petsData = [
   {
     id:5,
     name: "Katrine",
-    img: "src\assets\img\pets-katrine.png",
+    img: "/src/assets/img/pets-katrine.png",
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -67,7 +67,7 @@ const petsData = [
   {
     id:6,
     name: "Timmy",
-    img: "src\assets\img\pets-timmy.png",
+    img: "/src/assets/img/pets-timmy.png",
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -80,7 +80,7 @@ const petsData = [
   {
     id:7,
     name: "Freddie",
-    img: "src\assets\img\pets-freddie.png",
+    img: "/src/assets/img/pets-freddie.png",
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -93,7 +93,7 @@ const petsData = [
   {
     id:8,
     name: "Charly",
-    img: "src\assets\img\pets-charly.png",
+    img: "/src/assets/img/pets-charly.png",
     type: "Dog",
     breed: "Jack Russell Terrier",
     description:
@@ -104,3 +104,5 @@ const petsData = [
     parasites: ["lice", "fleas"],
   },
 ];
+
+export default petsData;

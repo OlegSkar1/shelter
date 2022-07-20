@@ -1,3 +1,6 @@
+import petsData from "./pets.js";
+import PetCard from "./PetCard.js";
+
 const BTN_LEFT = document.querySelector("#btn-left");
 const BTN_RIGHT = document.querySelector("#btn-right");
 const CAROUSEL = document.querySelector("#pets-carousel");
@@ -37,3 +40,42 @@ CAROUSEL.addEventListener("animationend", (animation) => {
   BTN_RIGHT.addEventListener("click", moveRight);
   BTN_LEFT.addEventListener("click", moveLeft);
 });
+
+const createPetCards = (data) => {
+  let cards = [];
+  data.forEach((item) => {
+    cards.push(new PetCard(item));
+  });
+  return cards;
+};
+
+const getRandomId = (max) => {
+  return Math.floor(Math.random() * max);
+};
+
+window.onload = function () {
+  ITEM_RIGHT.innerHTML = "";
+  ITEM_ACTIVE.innerHTML = "";
+  ITEM_LEFT.innerHTML = "";
+  generateLeftContainer(petsData);
+};
+
+const generateLeftContainer = (data) => {
+  let setCard = new Set();
+  while (setCard.size < 3) {
+    let randomId = getRandomId(data.length);
+    // const cards = createPetCards(data);
+    // const card = cards[randomId];
+    setCard.add(randomId);
+  }
+  console.log(setCard);
+  for (let randomId of setCard) {
+    createPetCards(petsData);
+    let cards = createPetCards(petsData).generateCard();
+    console.log(cards);
+    // item.innerHTML = item.generateCard();
+    // console.log((item.innerHTML = item.generateCard()));
+    // ITEM_LEFT.append(item);
+  }
+  ITEM_RIGHT.append(card);
+};
