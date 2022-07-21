@@ -7,10 +7,10 @@ class PetCard {
 
   // PetCard generator
   generateCard() {
-    let template = "";
-    let card = document.createElement("div");
-    card.className = "pet-card";
-    card.setAttribute("data-id", this.id);
+    let template = '';
+    let card = document.createElement('div');
+    card.className = 'pet-card';
+    card.setAttribute('data-id', this.id);
 
     template += `<img src="${this.img}" alt="pet" class="pets__img">
     <p>${this.name}</p>
