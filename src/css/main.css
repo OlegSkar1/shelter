@@ -712,7 +712,6 @@ body {
     row-gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 15px;
   }
   .pets__slider .slider__arrow_left {
     order: 1;
@@ -733,6 +732,11 @@ body {
     column-gap: 40px;
   }
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .pets__slider .pet-card__container {
+    column-gap: 20px;
+  }
+}
 .pets__slider .pets-carousel__wrapper {
   width: 990px;
   margin: auto;
@@ -741,6 +745,11 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .pets__slider .pets-carousel__wrapper {
     width: 580px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .pets__slider .pets-carousel__wrapper {
+    width: 270px;
   }
 }
 .pets__slider .pets-carousel__wrapper .pets-carousel {

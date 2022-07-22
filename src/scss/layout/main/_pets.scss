@@ -51,7 +51,6 @@
     row-gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 15px;
 
     .slider__arrow_left {
       order: 1;
@@ -72,6 +71,9 @@
     @include media-tablet {
       column-gap: 40px;
     }
+    @include media-mobile {
+      column-gap: 20px;
+    }
   }
 
   .pets-carousel__wrapper {
@@ -81,6 +83,9 @@
 
     @include media-tablet {
       width: 580px;
+    }
+    @include media-mobile {
+      width: 270px;
     }
 
     .pets-carousel {
