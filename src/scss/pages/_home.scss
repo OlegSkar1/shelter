@@ -6,20 +6,18 @@ body {
   margin: 0 auto;
   position: relative;
 
-  @include media-mobile {
-    &.lock:after {
-      content: "";
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      background: $blackout;
-      animation-duration: 0.3s;
-      animation-name: background;
-    }
-    &.lock {
-      overflow: hidden;
-    }
+  &.lock:after {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: $blackout;
+    animation-duration: 0.3s;
+    animation-name: background;
+  }
+  &.lock {
+    overflow: hidden;
   }
 }

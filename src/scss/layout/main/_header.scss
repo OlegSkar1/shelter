@@ -45,7 +45,9 @@
     top: 30px;
     left: 10px;
   }
-  z-index: 1;
+  @include media-mobile {
+    z-index: 1;
+  }
 }
 
 // Start screen

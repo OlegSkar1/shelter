@@ -1,23 +1,24 @@
 // Base
-@import "./base/reset";
-@import "./base/typography";
+@import './base/reset';
+@import './base/typography';
 
 // Utils
-@import "./utils/variables";
-@import "./utils/prototype";
-@import "./utils/mixins";
-@import "./utils/animation";
+@import './utils/variables';
+@import './utils/prototype';
+@import './utils/mixins';
+@import './utils/animation';
 
 // Pages
-@import "./pages/home";
+@import './pages/home';
 
 //Components
-@import "./components/buttons";
-@import "./components/card";
-@import "./components/navigation";
-@import "./components/header_nav";
+@import './components/buttons';
+@import './components/card';
+@import './components/navigation';
+@import './components/header_nav';
+@import './components/popup';
 
 // Layout
-@import "./layout/pets/header";
-@import "./layout/pets/pets";
-@import "./layout/main/footer";
+@import './layout/pets/header';
+@import './layout/pets/pets';
+@import './layout/main/footer';
