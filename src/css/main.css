@@ -738,6 +738,11 @@ body {
   margin: auto;
   overflow: hidden;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .pets__slider .pets-carousel__wrapper {
+    width: 580px;
+  }
+}
 .pets__slider .pets-carousel__wrapper .pets-carousel {
   display: flex;
   position: relative;
