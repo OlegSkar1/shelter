@@ -54,7 +54,11 @@ const createPetCards = (data) => {
 // генерируем массив из случайных уникальных индексов
 const generateRandomArray = (data) => {
   let setCard = new Set();
-  while (setCard.size < 3) {
+  let count;
+  if (document.body.clientWidth >= 1280) count = 3;
+  else if (document.body.clientWidth >= 768) count = 2;
+  else count = 1;
+  while (setCard.size < count) {
     let randomId = Math.floor(Math.random() * data.length) + 1; // случайный Id от 1 до max включая границы
     setCard.add(randomId);
   }
@@ -88,7 +92,11 @@ const uniqCardId = (active, current, data) => {
   }
 
   // получаем уникальный массив
-  return [...uniqCardId].slice(3);
+  let count;
+  if (document.body.clientWidth >= 1280) count = 3;
+  else if (document.body.clientWidth >= 768) count = 2;
+  else count = 1;
+  return [...uniqCardId].slice(count);
 };
 
 // генерируем ITEM_ACTIVE из случайных карточек
