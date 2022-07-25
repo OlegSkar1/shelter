@@ -7,9 +7,10 @@ body {
   position: relative;
 
   &.lock:after {
-    content: '';
+    content: "";
     position: fixed;
-    width: 100%;
+    overflow-y: auto;
+    width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
@@ -19,5 +20,6 @@ body {
   }
   &.lock {
     overflow: hidden;
+    padding-right: 17px; // ширина полосы прокрутки, паддинг устраняет прыжок контента при скрытии полосы прокрутки
   }
 }

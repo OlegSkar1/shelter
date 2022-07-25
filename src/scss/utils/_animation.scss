@@ -25,3 +25,13 @@
     left: 0;
   }
 }
+
+//popup animation
+@keyframes modal-open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

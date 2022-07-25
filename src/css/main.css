@@ -204,6 +204,14 @@ select {
     left: 0;
   }
 }
+@keyframes modal-open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .pet-card {
   width: 270px;
   height: 435px;
@@ -452,6 +460,12 @@ select {
 .modal__wrapper .modal__close-btn:hover {
   background: #fddcc4;
 }
+.modal__wrapper .active-btn {
+  background: #fddcc4;
+  border: 2px solid #fddcc4;
+  cursor: pointer;
+  transition: 0.3s all;
+}
 .modal__wrapper .modal__img {
   width: 500px;
   height: 500px;
@@ -497,7 +511,8 @@ body {
 body.lock:after {
   content: "";
   position: fixed;
-  width: 100%;
+  overflow-y: auto;
+  width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
@@ -507,6 +522,7 @@ body.lock:after {
 }
 body.lock {
   overflow: hidden;
+  padding-right: 17px;
 }
 
 .header__wrapper {
