@@ -9,7 +9,6 @@
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   margin: auto;
   z-index: 1;
-  // display: none;
 }
 
 .modal__wrapper {
@@ -61,7 +60,7 @@
         position: relative;
       }
       .list-item:before {
-        content: "";
+        content: '';
         display: inline-block;
         position: relative;
         width: 4px;
