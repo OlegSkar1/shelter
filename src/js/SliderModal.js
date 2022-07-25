@@ -1,6 +1,6 @@
-import { Modal } from "./Modal.js";
+import { Modal } from './Modal.js';
 
-export class SliderModal extends Modal {
+export default class SliderModal extends Modal {
   constructor(
     classes,
     {
@@ -17,8 +17,6 @@ export class SliderModal extends Modal {
     }
   ) {
     super(classes);
-    // this.petImg = "";
-    // this.card = "";
     this.id = id;
     this.name = name;
     this.img = img;
@@ -33,8 +31,8 @@ export class SliderModal extends Modal {
 
   // PetCard window modal generator
   generateCard() {
-    let card = super.createDomNode(this.card, "div", "modal__content");
-    let template = "";
+    let card = super.createDomNode(this.card, 'div', 'modal__content');
+    let template = '';
     template += `
     <h3>${this.name}</h3>
     <h4>${this.type} - ${this.breed}</h4>
@@ -57,11 +55,11 @@ export class SliderModal extends Modal {
     if (document.body.offsetWidth < 768) {
       return super.buildModal(content);
     }
-    let petImg = super.createDomNode(this.petImg, "img", "modal__img");
+    let petImg = super.createDomNode(this.petImg, 'img', 'modal__img');
     petImg.src = `${this.img}`;
-    petImg.setAttribute("alt", "pets");
+    petImg.setAttribute('alt', 'pets');
 
     super.buildModal(content);
-    content.insertAdjacentElement("beforebegin", petImg);
+    content.insertAdjacentElement('beforebegin', petImg);
   }
 }

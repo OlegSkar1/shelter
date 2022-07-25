@@ -1,47 +1,46 @@
-import petsData from "./pets.js";
-import PetCard from "./PetCard.js";
-import { Modal } from "./Modal.js";
-import { SliderModal } from "./SliderModal.js";
+import petsData from './pets.js';
+import PetCard from './PetCard.js';
+import SliderModal from './SliderModal.js';
 
-const BTN_LEFT = document.querySelector("#btn-left");
-const BTN_RIGHT = document.querySelector("#btn-right");
-const CAROUSEL = document.querySelector("#pets-carousel");
-const ITEM_ACTIVE = document.querySelector("#container-active");
-const ITEM_LEFT = document.querySelector("#container-left");
-const ITEM_RIGHT = document.querySelector("#container-right");
+const BTN_LEFT = document.querySelector('#btn-left');
+const BTN_RIGHT = document.querySelector('#btn-right');
+const CAROUSEL = document.querySelector('#pets-carousel');
+const ITEM_ACTIVE = document.querySelector('#container-active');
+const ITEM_LEFT = document.querySelector('#container-left');
+const ITEM_RIGHT = document.querySelector('#container-right');
 
 // перелистывание влево
 const moveLeft = () => {
-  CAROUSEL.classList.add("transition-left");
-  BTN_LEFT.removeEventListener("click", moveLeft); // запрещаем перелистывать пока не закончится анимация
-  BTN_RIGHT.removeEventListener("click", moveRight);
+  CAROUSEL.classList.add('transition-left');
+  BTN_LEFT.removeEventListener('click', moveLeft); // запрещаем перелистывать пока не закончится анимация
+  BTN_RIGHT.removeEventListener('click', moveRight);
 };
 
 // перелистывание вправо
 const moveRight = () => {
-  CAROUSEL.classList.add("transition-right");
-  BTN_RIGHT.removeEventListener("click", moveRight);
-  BTN_LEFT.removeEventListener("click", moveLeft);
+  CAROUSEL.classList.add('transition-right');
+  BTN_RIGHT.removeEventListener('click', moveRight);
+  BTN_LEFT.removeEventListener('click', moveLeft);
 };
 
-BTN_RIGHT.addEventListener("click", moveRight);
-BTN_LEFT.addEventListener("click", moveLeft);
+BTN_RIGHT.addEventListener('click', moveRight);
+BTN_LEFT.addEventListener('click', moveLeft);
 
-CAROUSEL.addEventListener("animationend", (animation) => {
-  if (animation.animationName === "move-left") {
-    CAROUSEL.classList.remove("transition-left");
+CAROUSEL.addEventListener('animationend', (animation) => {
+  if (animation.animationName === 'move-left') {
+    CAROUSEL.classList.remove('transition-left');
     ITEM_RIGHT.innerHTML = ITEM_ACTIVE.innerHTML; // переписываем элементы центра на правую позицию
     ITEM_ACTIVE.innerHTML = ITEM_LEFT.innerHTML; // переписываем элементы слева на центральную позицию
     generateLeftContainer(petsData);
   } else {
-    CAROUSEL.classList.remove("transition-right");
+    CAROUSEL.classList.remove('transition-right');
     ITEM_LEFT.innerHTML = ITEM_ACTIVE.innerHTML;
     ITEM_ACTIVE.innerHTML = ITEM_RIGHT.innerHTML;
     generateRightContainer(petsData);
   }
 
-  BTN_RIGHT.addEventListener("click", moveRight);
-  BTN_LEFT.addEventListener("click", moveLeft);
+  BTN_RIGHT.addEventListener('click', moveRight);
+  BTN_LEFT.addEventListener('click', moveLeft);
 });
 
 // создаем ноды из массива объектов питомцев
@@ -69,7 +68,7 @@ const generateRandomArray = (data) => {
 
 // Рендерим те карточки, data-id которых совпадают с generateRandomArray
 const renderFiltredCards = (data, item) => {
-  item.innerHTML = "";
+  item.innerHTML = '';
   let randomArr = generateRandomArray(data);
 
   // создаем ноды из массива объектов питомцев
@@ -111,8 +110,8 @@ const generateActiveContainer = (data) => {
 const generateLeftContainer = (data) => {
   renderFiltredCards(data, ITEM_LEFT); // создаем ITEM_LEFT
 
-  const activeCards = document.querySelectorAll("#container-active .pet-card");
-  const leftCards = document.querySelectorAll("#container-left .pet-card");
+  const activeCards = document.querySelectorAll('#container-active .pet-card');
+  const leftCards = document.querySelectorAll('#container-left .pet-card');
 
   // получаем массивы data-id
   let activeCardId = Array.from(activeCards).map((card) => +card.dataset.id);
@@ -123,7 +122,7 @@ const generateLeftContainer = (data) => {
   let uniqCard = uniqCardId(activeCardId, leftCardId, data);
 
   //рендерим leftContainer с уникальными карточками
-  ITEM_LEFT.innerHTML = "";
+  ITEM_LEFT.innerHTML = '';
   const petCards = createPetCards(data);
 
   let filtredCards = petCards.filter((card) => uniqCard.includes(card.id));
@@ -137,8 +136,8 @@ const generateLeftContainer = (data) => {
 const generateRightContainer = (data) => {
   renderFiltredCards(data, ITEM_RIGHT); // создаем ITEM_RIGHT
 
-  const activeCards = document.querySelectorAll("#container-active .pet-card");
-  const rightCards = document.querySelectorAll("#container-right .pet-card");
+  const activeCards = document.querySelectorAll('#container-active .pet-card');
+  const rightCards = document.querySelectorAll('#container-right .pet-card');
 
   // получаем массивы data-id
   let activeCardId = Array.from(activeCards).map((card) => +card.dataset.id);
@@ -149,7 +148,7 @@ const generateRightContainer = (data) => {
   let uniqCard = uniqCardId(activeCardId, rightCardId, data);
 
   //рендерим leftContainer с уникальными карточками
-  ITEM_RIGHT.innerHTML = "";
+  ITEM_RIGHT.innerHTML = '';
   const petCards = createPetCards(data);
 
   let filtredCards = petCards.filter((card) => uniqCard.includes(card.id));
@@ -168,10 +167,10 @@ window.onload = function () {
 
 //SliderModal window
 const addSliderClickHandler = () => {
-  ITEM_ACTIVE.addEventListener("click", (e) => {
-    let card = e.target.closest(".pet-card");
+  ITEM_ACTIVE.addEventListener('click', (e) => {
+    let card = e.target.closest('.pet-card');
     if (card) {
-      let clickedCardId = card.getAttribute("data-id");
+      let clickedCardId = card.getAttribute('data-id');
       let clickedCardData = getClickedData(clickedCardId);
 
       renderSliderModalWindow(clickedCardData);
@@ -180,7 +179,7 @@ const addSliderClickHandler = () => {
 };
 
 const renderSliderModalWindow = (card) => {
-  let modal = new SliderModal("modal", card);
+  let modal = new SliderModal('modal', card);
   modal.renderModal();
 };
 

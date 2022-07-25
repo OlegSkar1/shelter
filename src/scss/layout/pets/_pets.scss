@@ -6,9 +6,9 @@
     @extend %h3;
     text-align: center;
     color: $color-dark-l;
-    @include width(400, 1200);
-    @include padding-bottom(45, 1280);
-    @include padding-top(80, 1280);
+    width: 400px;
+    padding-bottom: 45px;
+    padding-top: 165px;
     margin: 0 auto;
 
     @include media-tablet {

@@ -681,9 +681,9 @@ body.lock {
 .pets h3 {
   text-align: center;
   color: #545454;
-  width: 33.3333333333%;
-  padding-bottom: 3.515625%;
-  padding-top: 6.25%;
+  width: 400px;
+  padding-bottom: 45px;
+  padding-top: 165px;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
