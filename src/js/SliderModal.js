@@ -52,10 +52,14 @@ export class SliderModal extends Modal {
   }
 
   renderModal() {
+    let content = this.generateCard();
+
+    if (document.body.offsetWidth < 768) {
+      return super.buildModal(content);
+    }
     let petImg = super.createDomNode(this.petImg, "img", "modal__img");
     petImg.src = `${this.img}`;
     petImg.setAttribute("alt", "pets");
-    let content = this.generateCard();
 
     super.buildModal(content);
     content.insertAdjacentElement("beforebegin", petImg);
