@@ -1,5 +1,3 @@
-import petsData from '../js/pets.js';
-
 // создаем массив из 48 питомцев в псевдо-случайном порядке
 function mixarr(arr) {
   return arr
@@ -14,4 +12,12 @@ export const createPetArray = (data) => {
     result.push(mixarr(data));
   }
   return result;
+};
+
+// кол-во элементов на страницу
+export const numOfElemsPerPage = 8;
+
+// общее кол-во страниц
+export const numOfButtons = (arr, num) => {
+  return Math.ceil(arr.length / num);
 };

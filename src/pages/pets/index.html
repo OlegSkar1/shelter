@@ -38,22 +38,33 @@
           <h3>Our friends who are looking for a house</h3>
           <div class="pets__content"></div>
           <div class="navigation pets__navigation">
-            <button class="button__paginator_inactive" disabled>
+            <button
+              class="button__paginator button_inactive"
+              id="button_first"
+              disabled
+            >
               <span><<</span>
             </button>
-            <button class="button__paginator_inactive" disabled>
+            <button
+              class="button__paginator button_inactive"
+              id="button_prev"
+              disabled
+            >
               <span><</span>
             </button>
-            <button class="button__paginator_active">
+            <button class="button__paginator button_active" id="button_active">
               <span>1</span>
             </button>
-            <button class="button__paginator"><span>></span></button>
-            <button class="button__paginator"><span>>></span></button>
+            <button class="button__paginator" id="button_next">
+              <span>></span>
+            </button>
+            <button class="button__paginator" id="button_last">
+              <span>>></span>
+            </button>
           </div>
         </div>
       </section>
     </main>
-
     <footer class="footer" id="footer">
       <div class="footer__wrapper">
         <div class="content-container content-container__contact">

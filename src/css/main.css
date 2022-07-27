@@ -139,7 +139,7 @@ select {
   letter-spacing: 0.06em;
 }
 
-.content-container a, .donation__card span, .list__item p, .modal__wrapper .modal__content h4, .button__paginator span, .button__paginator_active span, .button__paginator_inactive span, .pet-card p {
+.content-container a, .donation__card span, .list__item p, .modal__wrapper .modal__content h4, .button_inactive span, .button__paginator span, .pet-card p {
   font-family: "tinos";
   font-style: normal;
   font-weight: 400;
@@ -275,33 +275,6 @@ select {
   transition: 0.3s all;
 }
 
-.button__paginator_inactive {
-  width: 52px;
-  height: 52px;
-  border: 2px solid #cdcdcd;
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.button__paginator_inactive span {
-  color: #cdcdcd;
-}
-
-.button__paginator_active {
-  width: 52px;
-  height: 52px;
-  background: #f1cdb3;
-  border: 0;
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.button__paginator_active span {
-  color: #292929;
-}
-
 .button__paginator {
   width: 52px;
   height: 52px;
@@ -320,6 +293,19 @@ select {
   border: 2px solid #fddcc4;
   cursor: pointer;
   transition: 0.3s all;
+}
+
+.button_inactive {
+  border: 2px solid #cdcdcd;
+  pointer-events: none;
+  color: #cdcdcd;
+}
+.button_inactive span {
+  color: #cdcdcd;
+}
+
+.button_active {
+  background: #f1cdb3;
 }
 
 .burger span, .burger:before, .burger:after {

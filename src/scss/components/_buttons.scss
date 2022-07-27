@@ -24,39 +24,6 @@
 }
 
 // Navigation-buttons
-.button__paginator_inactive {
-  width: 52px;
-  height: 52px;
-  border: 2px solid $color-dark-s;
-  border-radius: 100px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  span {
-    @extend %h4;
-    color: $color-dark-s;
-  }
-}
-
-.button__paginator_active {
-  width: 52px;
-  height: 52px;
-  background: $color-primary;
-  border: 0;
-  border-radius: 100px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  span {
-    @extend %h4;
-    color: $color-dark-3xl;
-  }
-}
-
 .button__paginator {
   width: 52px;
   height: 52px;
@@ -81,6 +48,20 @@
   }
 }
 
+.button_inactive {
+  border: 2px solid $color-dark-s;
+  pointer-events: none;
+  color: $color-dark-s;
+
+  span {
+    @extend %h4;
+    color: $color-dark-s;
+  }
+}
+
+.button_active {
+  background: $color-primary;
+}
 // Burger-button
 %burger {
   position: absolute;
