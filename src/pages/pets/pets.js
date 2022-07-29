@@ -69,25 +69,34 @@ const addModalClickHandler = () => {
   NAVIGATION.addEventListener('click', (e) => {
     let numOfAllPages = numOfButtons(resultArr, numOfElemsPerPage);
     let button = e.target;
-    if (button.closest('.button__paginator')) {
-      let currPage = +BUTTON_ACTIVE.textContent;
-      let start;
-      let end;
+    let currPage = +BUTTON_ACTIVE.textContent;
       if (button.closest('#button_next') && currPage < numOfAllPages) {
         currPage += 1;
-        BUTTON_ACTIVE.textContent = currPage;
-        start = numOfElemsPerPage * (currPage - 1);
-        end = numOfElemsPerPage * currPage;
-        CONTENT.innerHTML = '';
-        renderCurrPage(start, end);
-      } else if (button.closest('#button_last')) {
-        BUTTON_ACTIVE.textContent = numOfAllPages;
-        start = numOfElemsPerPage * (numOfAllPages - 1);
-        CONTENT.innerHTML = '';
-        renderCurrPage(start, end);
+        getPage(currPage);
+      } 
+      if (button.closest('#button_last') && currPage < numOfAllPages) {
+        getPage(numOfAllPages);
       }
-    }
+      if (button.closest('#button_prev') && currPage > 1) {
+        currPage -= 1;
+        getPage(currPage);
+      }
+      if (button.closest('#button_first') && currPage > 1) {
+        currPage = 1;
+        getPage(currPage);
+      }
+      // if (button.closest('.button__paginator') && !button.closest('#button_active')) {
+      //   console.log('first')
+      // } здесь закончить с переключением стилей кнопок
   })
+
+  const getPage = (page) => {
+    BUTTON_ACTIVE.innerHTML = `<span>${page}</span>`;
+    let start = numOfElemsPerPage * (page - 1);
+    let end = numOfElemsPerPage * page;
+    CONTENT.innerHTML = '';
+    renderCurrPage(start, end);
+  }
 
   const renderCurrPage = (start, end) => {
     let slicedArr = resultArr.slice(start, end);
