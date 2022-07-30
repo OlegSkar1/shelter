@@ -35,3 +35,13 @@
     opacity: 1;
   }
 }
+
+// pagination animation
+@keyframes pagination {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -15,7 +15,13 @@ export const createPetArray = (data) => {
 };
 
 // кол-во элементов на страницу
-export const numOfElemsPerPage = 8;
+export const numOfElemsPerPage = () => {
+  if (document.body.offsetWidth >= 1280) {
+    return 8;
+  } else if (document.body.offsetWidth >= 768) {
+    return 6;
+  } else return 3;
+};
 
 // общее кол-во страниц
 export const numOfButtons = (arr, num) => {

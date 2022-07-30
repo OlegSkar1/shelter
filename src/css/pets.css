@@ -201,6 +201,14 @@ select {
     opacity: 1;
   }
 }
+@keyframes pagination {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 html {
   background-color: #e5e5e5;
 }
@@ -418,6 +426,8 @@ body.lock {
     justify-content: center;
     align-items: center;
     row-gap: 40px;
+    padding-top: 70px;
+    overflow: auto;
     position: fixed;
     top: 0;
     right: -100%;
@@ -446,7 +456,7 @@ body.lock {
   border-radius: 9px;
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   margin: auto;
-  z-index: 1;
+  z-index: 5;
   animation-duration: 0.3s;
   animation-name: modal-open;
 }
@@ -576,6 +586,7 @@ body.lock {
   max-width: 1280px;
   width: 100%;
   background: #fff;
+  z-index: 1;
 }
 .header.header_active {
   position: absolute;
@@ -608,9 +619,6 @@ body.lock {
   color: #292929;
 }
 
-.header__nav {
-  z-index: 1;
-}
 .header__nav .header__logo {
   display: block;
   position: absolute;
@@ -698,6 +706,7 @@ body.lock {
   padding-left: 3.125%;
   padding-right: 3.125%;
   gap: 30px 40px;
+  z-index: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .pets__content {
@@ -713,9 +722,10 @@ body.lock {
     flex-direction: column;
     padding: 0 25px 42px;
   }
-  .pets__content :not(:nth-child(-n+3)) {
-    display: none;
-  }
+}
+.pets__content .pet-card {
+  animation-name: pagination;
+  animation-duration: 0.3s;
 }
 
 .pets__navigation {

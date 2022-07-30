@@ -6,6 +6,7 @@ const headerLogo = document.querySelector(".header__logo");
 const headerNav = document.querySelector(".header__nav");
 const body = document.body;
 const navLinks = document.querySelectorAll(".header__link");
+
 const removeActiveLink = () => {
   navLinks.forEach((link) => {
     if (link.classList.contains("active")) {

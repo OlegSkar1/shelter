@@ -65,6 +65,8 @@ export class Modal {
   openModal() {
     document.body.append(this.modal);
     document.body.classList.add("lock");
+    document.querySelector(".header").style.opacity = "0";
+    document.querySelector(".header").style.zIndex = "0";
   }
 
   closeModal(e) {
@@ -72,6 +74,8 @@ export class Modal {
     if (classes.contains("lock") || e.target.closest(".modal__close-btn")) {
       document.querySelector(".modal").remove();
       document.body.classList.remove("lock");
+      document.querySelector(".header").style.opacity = "1";
+      document.querySelector(".header").style.zIndex = "1";
       e.stopPropagation();
     }
   }

@@ -38,6 +38,8 @@
   @extend %grid-4-col;
   gap: 30px 40px;
 
+  z-index: 0;
+
   @include media-tablet {
     display: grid;
     grid-template-columns: repeat(2, 270px);
@@ -49,10 +51,11 @@
     display: flex;
     flex-direction: column;
     padding: 0 25px 42px;
+  }
 
-    :not(:nth-child(-n + 3)) {
-      display: none;
-    }
+  .pet-card {
+    animation-name: pagination;
+    animation-duration: 0.3s;
   }
 }
 
