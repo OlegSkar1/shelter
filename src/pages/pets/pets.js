@@ -1,21 +1,18 @@
-import "../../js/burgerMenu.js";
-import "../../js/pagination.js";
-import petsData from "../../js/pets.js";
-import PetCard from "../../js/PetCard.js";
-import SliderModal from "../../js/SliderModal.js";
-import {
-  createPetArray,
-  numOfButtons,
-  numOfElemsPerPage,
-} from "../../js/pagination.js";
+import '../../scss/pets.scss';
+import '../../js/burgerMenu';
+import '../../js/pagination';
+import petsData from '../../js/pets';
+import PetCard from '../../js/PetCard';
+import SliderModal from '../../js/SliderModal';
+import { createPetArray, numOfButtons, numOfElemsPerPage } from '../../js/pagination';
 
-const CONTENT = document.querySelector(".pets__content");
-const NAVIGATION = document.querySelector(".navigation");
-const BUTTON_FIRST = document.querySelector("#button_first");
-const BUTTON_PREV = document.querySelector("#button_prev");
-const BUTTON_ACTIVE = document.querySelector("#button_active");
-const BUTTON_NEXT = document.querySelector("#button_next");
-const BUTTON_LAST = document.querySelector("#button_last");
+const CONTENT = document.querySelector('.pets__content');
+const NAVIGATION = document.querySelector('.navigation');
+const BUTTON_FIRST = document.querySelector('#button_first');
+const BUTTON_PREV = document.querySelector('#button_prev');
+const BUTTON_ACTIVE = document.querySelector('#button_active');
+const BUTTON_NEXT = document.querySelector('#button_next');
+const BUTTON_LAST = document.querySelector('#button_last');
 
 const createPetCards = (data) => {
   let cards = [];
@@ -39,10 +36,10 @@ const resultArr = getResultPetArr(petsData); // сохранили получе�
 //modal
 
 const addModalClickHandler = () => {
-  CONTENT.addEventListener("click", (e) => {
-    let card = e.target.closest(".pet-card");
+  CONTENT.addEventListener('click', (e) => {
+    let card = e.target.closest('.pet-card');
     if (card) {
-      let clickedCardId = card.getAttribute("data-id");
+      let clickedCardId = card.getAttribute('data-id');
       let clickedCardData = getClickedData(clickedCardId);
       renderModalWindow(clickedCardData);
     }
@@ -54,7 +51,7 @@ const getClickedData = (id) => {
 };
 
 const renderModalWindow = (card) => {
-  let modal = new SliderModal("modal", card);
+  let modal = new SliderModal('modal', card);
   modal.renderModal();
 };
 
@@ -77,25 +74,25 @@ const renderPagination = (e) => {
   let button = e.target;
   let currPage = +BUTTON_ACTIVE.textContent;
 
-  if (button.closest("#button_next") && currPage < numOfAllPages) {
+  if (button.closest('#button_next') && currPage < numOfAllPages) {
     currPage += 1;
     getPage(currPage, numOfAllPages);
-    NAVIGATION.removeEventListener("click", renderPagination);
+    NAVIGATION.removeEventListener('click', renderPagination);
   }
-  if (button.closest("#button_last") && currPage < numOfAllPages) {
+  if (button.closest('#button_last') && currPage < numOfAllPages) {
     currPage = numOfAllPages;
     getPage(currPage, numOfAllPages);
-    NAVIGATION.removeEventListener("click", renderPagination);
+    NAVIGATION.removeEventListener('click', renderPagination);
   }
-  if (button.closest("#button_prev") && currPage > 1) {
+  if (button.closest('#button_prev') && currPage > 1) {
     currPage -= 1;
     getPage(currPage, numOfAllPages);
-    NAVIGATION.removeEventListener("click", renderPagination);
+    NAVIGATION.removeEventListener('click', renderPagination);
   }
-  if (button.closest("#button_first") && currPage > 1) {
+  if (button.closest('#button_first') && currPage > 1) {
     currPage = 1;
     getPage(currPage, numOfAllPages);
-    NAVIGATION.removeEventListener("click", renderPagination);
+    NAVIGATION.removeEventListener('click', renderPagination);
   }
 };
 
@@ -104,7 +101,7 @@ const getPage = (page, numOfAllPages) => {
   BUTTON_ACTIVE.innerHTML = `<span>${page}</span>`;
   let start = numOfElemsPerPage() * (page - 1);
   let end = numOfElemsPerPage() * page;
-  CONTENT.innerHTML = "";
+  CONTENT.innerHTML = '';
 
   changeButtonsClass(page, numOfAllPages);
   renderCurrPage(start, end);
@@ -113,29 +110,27 @@ const getPage = (page, numOfAllPages) => {
 // изменяем состояние при нажатии кнопок пагинации
 const changeButtonsClass = (currPage, numOfAllPages) => {
   if (currPage > 1 && currPage < numOfAllPages) {
-    BUTTON_FIRST.classList.remove("button_inactive");
-    BUTTON_PREV.classList.remove("button_inactive");
-    BUTTON_LAST.classList.remove("button_inactive");
-    BUTTON_NEXT.classList.remove("button_inactive");
+    BUTTON_FIRST.classList.remove('button_inactive');
+    BUTTON_PREV.classList.remove('button_inactive');
+    BUTTON_LAST.classList.remove('button_inactive');
+    BUTTON_NEXT.classList.remove('button_inactive');
   }
   if (currPage == numOfAllPages) {
-    BUTTON_FIRST.classList.remove("button_inactive");
-    BUTTON_PREV.classList.remove("button_inactive");
-    BUTTON_LAST.classList.add("button_inactive");
-    BUTTON_NEXT.classList.add("button_inactive");
+    BUTTON_FIRST.classList.remove('button_inactive');
+    BUTTON_PREV.classList.remove('button_inactive');
+    BUTTON_LAST.classList.add('button_inactive');
+    BUTTON_NEXT.classList.add('button_inactive');
   }
   if (currPage == 1) {
-    BUTTON_FIRST.classList.add("button_inactive");
-    BUTTON_PREV.classList.add("button_inactive");
-    BUTTON_LAST.classList.remove("button_inactive");
-    BUTTON_NEXT.classList.remove("button_inactive");
+    BUTTON_FIRST.classList.add('button_inactive');
+    BUTTON_PREV.classList.add('button_inactive');
+    BUTTON_LAST.classList.remove('button_inactive');
+    BUTTON_NEXT.classList.remove('button_inactive');
   }
 };
 
-NAVIGATION.addEventListener("click", renderPagination);
-CONTENT.addEventListener("animationend", () =>
-  NAVIGATION.addEventListener("click", renderPagination)
-);
+NAVIGATION.addEventListener('click', renderPagination);
+CONTENT.addEventListener('animationend', () => NAVIGATION.addEventListener('click', renderPagination));
 
 window.onload = function () {
   renderCurrPage(0, numOfElemsPerPage()); // потрисовываем первый slice

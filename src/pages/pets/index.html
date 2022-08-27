@@ -5,25 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shelter</title>
-    <link rel="stylesheet" href="/src/css/pets.css" />
   </head>
   <body>
     <header class="header">
       <div class="header__wrapper">
         <div class="header__logo">
-          <a href="/src/pages/main/index.html">
+          <a href="./index.html">
             <h1>Cozy House</h1>
             <p>Shelter for pets in Boston</p>
           </a>
         </div>
         <nav class="header__nav">
-          <a href="../main/index.html" class="header__link">
-            About the shelter
-          </a>
+          <a href="./index.html" class="header__link"> About the shelter </a>
           <a href="#pets" class="header__link active"> Our pets </a>
-          <a href="/src/pages/main/index.html#help" class="header__link">
-            Help the shelter</a
-          >
+          <a href="./index.html#help" class="header__link"> Help the shelter</a>
           <a href="#footer" class="header__link"> Contacts </a>
         </nav>
         <div class="burger">
@@ -39,19 +34,19 @@
           <div class="pets__content"></div>
           <div class="navigation pets__navigation">
             <button class="button__paginator button_inactive" id="button_first">
-              <span><<</span>
+              <span> &lt&lt </span>
             </button>
             <button class="button__paginator button_inactive" id="button_prev">
-              <span><</span>
+              <span>&lt</span>
             </button>
             <button class="button__paginator button_active" id="button_active">
               <span>1</span>
             </button>
             <button class="button__paginator" id="button_next">
-              <span>></span>
+              <span>&gt</span>
             </button>
             <button class="button__paginator" id="button_last">
-              <span>>></span>
+              <span>&gt&gt</span>
             </button>
           </div>
         </div>
@@ -72,31 +67,17 @@
         </div>
         <div class="content-container content-container__locate">
           <h3 class="locate__title">We are waiting for your visit</h3>
-          <a
-            href="https://g.page/MITMuseum?share"
-            target="_blank"
-            class="locate__boston-maps"
-          >
+          <a href="https://g.page/MITMuseum?share" target="_blank" class="locate__boston-maps">
             <img src="/src/assets/svg/icon-marker.svg" alt="marker" />
             <p>1 Central Street, Boston (entrance from the store)</p>
           </a>
-          <a
-            href="https://g.page/institute-of-contemporary-arts?share"
-            target="_blank"
-            class="locate__london-maps"
-          >
+          <a href="https://g.page/institute-of-contemporary-arts?share" target="_blank" class="locate__london-maps">
             <img src="/src/assets/svg/icon-marker.svg" alt="marker" />
             <p>18 South Park, London</p>
           </a>
         </div>
-        <img
-          src="/src/assets/img/footer-puppy.png"
-          alt="puppy"
-          class="content-container__img"
-        />
+        <img src="/src/assets/img/footer-puppy.png" alt="puppy" class="content-container__img" />
       </div>
     </footer>
-
-    <script type="module" src="./pets.js"></script>
   </body>
 </html>

@@ -1,8 +1,17 @@
+import jennifer from '../assets/img/pets-jennifer.png';
+import sophia from '../assets/img/pets-sophia.png';
+import woody from '../assets/img/pets-woody.png';
+import scarlet from '../assets/img/pets-scarlet.png';
+import katrine from '../assets/img/pets-katrine.png';
+import timmy from '../assets/img/pets-timmy.png';
+import freddie from '../assets/img/pets-freddie.png';
+import charly from '../assets/img/pets-charly.png';
+
 const petsData = [
   {
     id:1,
     name: "Jennifer",
-    img: "/src/assets/img/pets-jennifer.png",
+    img: jennifer,
     type: "Dog",
     breed: "Labrador",
     description:
@@ -15,7 +24,7 @@ const petsData = [
   {
     id:2,
     name: "Sophia",
-    img: "/src/assets/img/pets-sophia.png",
+    img: sophia,
     type: "Dog",
     breed: "Shih tzu",
     description:
@@ -28,7 +37,7 @@ const petsData = [
   {
     id:3,
     name: "Woody",
-    img: "/src/assets/img/pets-woody.png",
+    img: woody,
     type: "Dog",
     breed: "Golden Retriever",
     description:
@@ -41,7 +50,7 @@ const petsData = [
   {
     id:4,
     name: "Scarlett",
-    img: "/src/assets/img/pets-scarlet.png",
+    img: scarlet,
     type: "Dog",
     breed: "Jack Russell Terrier",
     description:
@@ -54,7 +63,7 @@ const petsData = [
   {
     id:5,
     name: "Katrine",
-    img: "/src/assets/img/pets-katrine.png",
+    img: katrine,
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -67,7 +76,7 @@ const petsData = [
   {
     id:6,
     name: "Timmy",
-    img: "/src/assets/img/pets-timmy.png",
+    img: timmy,
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -80,7 +89,7 @@ const petsData = [
   {
     id:7,
     name: "Freddie",
-    img: "/src/assets/img/pets-freddie.png",
+    img: freddie,
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -93,7 +102,7 @@ const petsData = [
   {
     id:8,
     name: "Charly",
-    img: "/src/assets/img/pets-charly.png",
+    img: charly,
     type: "Dog",
     breed: "Jack Russell Terrier",
     description:
